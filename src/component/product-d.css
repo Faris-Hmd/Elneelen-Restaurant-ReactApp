@@ -42,15 +42,16 @@ body {
   font-family: arial;
   color: var(--dark-clr);
   background-color: var(--light-clr);
-  border-radius: 15px;
+  border-radius: 10px 0 10px 0;
   position: absolute;
-  top: 3%;
-  right: 3%;
+  top: 0%;
+  left: 0%;
   border: 0.5px solid var(--dark-clr);
-  transition: all 400ms;
+  transition: all 300ms;
 }
 .quantityShift {
-  transform: scale(0);
+  transform: translateY(-200%);
+  
 }
 
 .rating,

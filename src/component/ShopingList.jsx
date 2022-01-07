@@ -51,14 +51,14 @@ class ShopingList extends Component {
     },
   ];
   ItemList = () => {
-    return this.itemListArray.map((item) => {
+    return this.itemListArray.map(({ name, imgUrl, rating, cost, id }) => {
       return (
         <Item
-          key={item.id}
-          name={item.name}
-          cost={item.cost}
-          rating={item.rating}
-          imgUrl={item.imgUrl}
+          key={id}
+          name={name}
+          cost={cost}
+          rating={rating}
+          imgUrl={imgUrl}
         />
       );
     });

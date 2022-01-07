@@ -21,7 +21,7 @@ class Item extends Component {
     }
   };
 
-  Items = ({}) => {
+  Items = (props) => {
     return (
       <div className="product-d">
         <div className={`quantity ${this.handleQu()}`}>{this.state.qu}</div>
