@@ -1,6 +1,5 @@
 /** @format */
 import React, { useState, useRef } from "react";
-import "./App.css";
 
 class LoginControl extends React.Component {
   constructor() {
