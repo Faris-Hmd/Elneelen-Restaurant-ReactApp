@@ -18,7 +18,7 @@ class ShopingList extends Component {
       id: 2,
       name: "pizza",
       cost: 1700,
-      rating: 2.7,
+      rating: `${2.5} /5`,
       imgUrl: "bbq burger.jpeg",
     },
     {
