@@ -89,6 +89,7 @@ body {
   border: 1px solid var(--dark-clr);
   box-shadow: -2px 2px 10px var(--shadow-clr);
   transition: all 500ms;
+  cursor: pointer;
 }
 
 .increase {
