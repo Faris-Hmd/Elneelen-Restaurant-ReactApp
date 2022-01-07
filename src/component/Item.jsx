@@ -16,7 +16,7 @@ class Item extends Component {
     }
   };
   handleQu = () => {
-    if (this.state.qu === 0) {
+    if (this.state.qu == 0) {
       return "quantityShift";
     }
   };
