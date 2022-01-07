@@ -1,0 +1,140 @@
+/** @format */
+body {
+  transition: all 500ms;
+}
+.contener-d {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: all 500ms;
+}
+.product-d {
+  color: var(--text-clr);
+  margin: 20px auto;
+  text-transform: capitalize;
+  border-radius: 10px;
+  box-shadow: -2px 2px 10px #222;
+  position: relative;
+  width: 40%;
+  transition: all 500ms;
+  overflow: hidden;
+}
+
+.product-d:hover {
+  transform: scale(1);
+}
+
+.product-d img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.quantity {
+  padding: 5px 17px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bolder;
+  font-family: arial;
+  color: var(--dark-clr);
+  background-color: var(--light-clr);
+  border-radius: 15px;
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  border: 0.5px solid var(--dark-clr);
+  transition: all 400ms;
+}
+.quantityShift {
+  transform: scale(0);
+}
+
+.rating,
+.cost,
+.desc {
+  padding-left: 5px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 0.7em;
+}
+
+.desc {
+  font-size: 0.9em;
+}
+
+.cost {
+  color: rgb(0, 189, 0);
+}
+
+.counter-d {
+  display: flex;
+  justify-content: right;
+  margin-left: 45%;
+}
+
+.increase,
+.decrease {
+  padding: 0px 15px;
+  margin: 0 3px 10px 3px;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 600;
+  background-color: var(--dark-clr);
+  color: #eee;
+  border-radius: 8px 3px 3px 8px;
+  border: 1px solid var(--dark-clr);
+  box-shadow: -2px 2px 10px var(--shadow-clr);
+  transition: all 500ms;
+}
+
+.increase {
+  border-radius: 3px 8px 8px 3px;
+}
+
+.increase:hover,
+.decrease:hover {
+  color: var(--dark-clr);
+  background-color: var(--light-clr);
+  cursor: default;
+}
+
+.navgate-contener {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.navgate-contener a {
+  padding: 10px;
+  margin: 20px 5px 5px 5px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #eee;
+  background-color: var(--dark-clr);
+  border-radius: 7px;
+  text-decoration: none;
+  border: 1px solid var(--dark-clr);
+  transition: all 300ms;
+}
+
+.navgate a:hover {
+  color: var(--dark-clr);
+  background-color: var(--light-clr);
+}
+
+@media (min-width: 600px) {
+  .product-d {
+    width: 230px;
+  }
+  .contener-d {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

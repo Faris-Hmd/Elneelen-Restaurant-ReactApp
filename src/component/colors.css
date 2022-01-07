@@ -1,0 +1,28 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+body {
+  font-family: "Nunito", sans-serif;
+}
+:root {
+  --light-clr: hsla(27, 70%, 75%, 100%);
+  --dark-clr: hsla(27, 80%, 50%, 90%);
+  --primary-clr: #eee;
+  --shadow-clr: #222;
+  --text-clr: #cecece;
+  --product-clr: #eee;
+  --side-closeBtn-clr: none;
+  --translate-sideMenu: translateX(-100%);
+  --side-clr: hsla(0, 0%, 80%, 60%);
+  --side-text-clr: #222;
+  --side-clr: hsla(0, 0%, 20%, 75%);
+  --side-text-clr: #eee;
+}
+
+.darkMode {
+  --primary-clr: hsla(30, 0%, 17%, 100%);
+  --light-clr: hsla(27, 70%, 20%, 100%);
+  --shadow-clr: #232323;
+  --text-clr: #eee;
+  --product-clr: hsla(30, 0%, 19%, 100%);
+}

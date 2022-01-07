@@ -1,0 +1,260 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /*background-image: url("./back 4.jpeg");*/
+  background-color:#444;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evanly;
+  width: 100%;
+}
+
+.nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.nav-con {
+  padding: 15px;
+  color: white;
+  font-size: 15px;
+
+  text-shadow: 1px 1px 20px white;
+}
+
+.sideOne,
+.sideTwo {
+  width: 100%;
+  position: ralative;
+}
+
+.sideOne {
+  background-image: linear-gradient(
+    rgba(204, 102, 0, 80%),
+    rgba(204, 102, 0, 40%)
+  );
+}
+
+.sideOne::after {
+  content: "";
+  height: 100%;
+  width: 20%;
+  transform: rotate(45deg);
+  background: hsla(26, 90%, 50%, 80%);
+}
+
+h2 {
+  color: gold;
+  font-style: italic;
+  text-shadow: 1px 1px 10px black;
+}
+
+.form {
+  padding: 10px;
+  max-width: 85%;
+  text-align: center;
+  margin: auto;
+  margin-top: 40px;
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  background: hsla(30, 10%, 75%, 70%);
+  text-align: center;
+  margin: 20px auto;
+  border-radius: 15px;
+  color: #444;
+  font-size: 1em;
+}
+
+.btn-order {
+  margin: 15px ;
+  text-align: center;
+  background-image: linear-gradient(
+    rgba(204, 102, 0, 100%),
+    rgba(204, 102, 0, 80%)
+  );
+  color: rgb(240, 240, 240);
+  text-decoration: none;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 300ms;
+  display: inline-block;
+  text-shadow: 2px 2px 5px rgb(78, 44, 0);
+}
+
+.btn-order:hover {
+  background-color: white;
+  color: orange;
+  transform: scale(1.05);
+}
+
+.col {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  border-top: 2px solid black;
+  background-color: rgba(100, 100, 100, 70%);
+  padding: 20px;
+}
+
+.col1,
+.col2,
+.col3 {
+  width: 50%;
+  margin: 20px auto 50px auto;
+  text-align: left;
+  background-image: linear-gradient(to bottom left, #cc6600, #ff944d);
+  box-shadow: -2px 2px 5px black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+footer {
+  border-top: 2px solid black;
+  width: 100%;
+  background-color: silver;
+  line-height: 20px;
+  font-weight: bold;
+}
+  
+
+#signUp input {
+  padding: 6px;
+  margin: 15px;
+}
+
+.form input {
+  width: 90%;
+  margin: 30px auto;
+  padding: 10px;
+  outline: none;
+  background: hsla(30, 0%, 100%, 0%);
+  border: none;
+  border-radius: 0;
+  border-bottom: 1.5px solid #555;
+  color: #222;
+  font-size: 20px;
+}
+input::placeholder {
+  color: #444;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+}
+
+input[type="submit"],
+.creat {
+  display: inline-block;
+  width: 40%;
+  border: none;
+  margin: 10px auto;
+  background-image: linear-gradient(
+    rgba(204, 102, 0, 100%),
+    rgba(204, 102, 0, 80%)
+  );
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  transition: transform 500ms;
+  box-shadow: -2px 2px 10px #222;
+  font-family: "Ubuntu", sans-serif;
+}
+
+form .already,
+.creatAccount {
+  font-size: 14px;
+  padding: 10px;
+}
+
+form .already span,
+.creatAccount span {
+  text-decoration: underline;
+}
+
+input[type="submit"]:focus {
+  background: white;
+  color: rgba(204, 102, 0, 100%);
+}
+
+#signUp {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  form {
+    width: 400px;
+  }
+
+  .sideOne,
+  .sideTwo {
+    width: 50%;
+  }
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.square {
+  padding: 10px;
+  margin: auto;
+  background-color: rgb(11, 66, 168);
+  border: cornsilk;
+  border-radius: 10px;
+}
+.App-header {
+  background-color: #121212;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
