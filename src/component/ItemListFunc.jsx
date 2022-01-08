@@ -6,7 +6,7 @@ import ItemFunc from "./ItemFunc";
 let itemListArray = [
   {
     id: 1,
-    name: "burger",
+    name: "Hello",
     cost: `${2000}$`,
     rating: `${4.5} /5`,
     imgUrl: "baked tilapia.jpg",
