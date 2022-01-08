@@ -36,11 +36,11 @@ const ItemFunc = ({ name, imgUrl, cost, rating }) => {
         <i className="fa fa-tag fa-fw"></i>  {cost}
       </div>
       <div className="counter-d">
-        <div className="decrease" onClick={handleIncr}>
+        <div className="decrease" onClick={handleDecr}>
           <i className="fa fa-angle-left"></i>
         </div>
 
-        <div className="increase" onClick={handleDecr}>
+        <div className="increase" onClick={handleIncr}>
           <i className="fa fa-angle-right"></i>
         </div>
       </div>
