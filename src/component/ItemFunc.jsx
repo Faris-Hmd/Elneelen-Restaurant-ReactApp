@@ -27,7 +27,7 @@ const ItemFunc = ({ name, imgUrl, cost, rating }) => {
     <div className="product-d">
       <div className={`quantity quantity${handleQuShiftClass()}`}>{qu}</div>
       <div>
-        <img src={`image/${imgUrl}`} />
+        <img alt="kind" src={`image/${imgUrl}`} />
       </div>
       <div className="desc">{name}</div>
       <div className="rating">Rating: {rating}</div>
