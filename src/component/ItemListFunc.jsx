@@ -3,7 +3,7 @@
 import React from "react";
 import ItemFunc from "./ItemFunc";
 
-const itemListArray = [
+let itemListArray = [
   {
     id: 1,
     name: "burger",
@@ -61,7 +61,13 @@ const itemListArray = [
     imgUrl: "baked tilapia.jpg",
   },
 ];
-
+itemListArray.push({
+  id: 9,
+  name: "faris",
+  imgUrl: "bbq burger.jpeg",
+  rating: `${4.0} / 5`,
+  cost: `${2050}$`,
+});
 const ItemListFunc = () => {
   return itemListArray.map(({ id, name, imgUrl, cost, rating }) => {
     return (

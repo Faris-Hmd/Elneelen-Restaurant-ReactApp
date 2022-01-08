@@ -1,9 +1,7 @@
 /** @format */
 
-import React, { PureComponent } from "react";
-import LoginControl from "./component/LoginControl";
-import ShopingList from "./component/ShopingList";
-import ItemFunc from "./component/ItemFunc";
+import React  from "react";
+
 import "./css/App.css"
 import "./css/product-d.css";
 import "./css/colors.css";

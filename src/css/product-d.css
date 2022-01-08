@@ -51,7 +51,6 @@ body {
 }
 .quantityShift {
   transform: translateY(-200%);
-  
 }
 
 .rating,
@@ -73,8 +72,8 @@ body {
 
 .counter-d {
   display: flex;
-  justify-content: right;
-  margin-left: 45%;
+  justify-content: center;
+  margin-left: 50%;
 }
 
 .increase,
@@ -131,7 +130,10 @@ body {
 
 @media (min-width: 600px) {
   .product-d {
-    width: 230px;
+    width: 300px;
+  }
+  .product-d img {
+    height: 220px;
   }
   .contener-d {
     display: flex;
