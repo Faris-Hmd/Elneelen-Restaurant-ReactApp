@@ -87,6 +87,7 @@ const App = () => {
       if (item.qu > 0) {
         qu = qu + 1;
       }
+      return null;
     })
     return qu;
   }
