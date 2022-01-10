@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useState } from "react";
+import NavBar from "./component/NavBar";
 import ItemListFunc from "./component/ItemListFunc";
 
 const App = () => {
@@ -12,7 +13,7 @@ const App = () => {
       cost: `${2000}$`,
       rating: `${4.5} /5`,
       imgUrl: "baked tilapia.jpg",
-      qu: 90,
+      qu: 5,
     },
     {
       id: 1,
@@ -74,14 +75,25 @@ const App = () => {
   const handleDecr = (id) => {
     if (DB[id].qu === 0) return;
     setDB(
-      DB.map((item) =>
+      DB.m9ap((item) =>
         item.id === id ? { ...item, qu: item.qu - 1 } : { ...item }
       )
     );
   };
 
+  const quantity = () => {
+    let qu = 0;
+    DB.map((item) => {
+      if (item.qu > 0) {
+        qu = qu + 1;
+      }
+    })
+    return qu;
+  }
+
   return (
     <div className="contener-d">
+      <NavBar quantity={quantity}/>
       <ItemListFunc handleIncr={handleIncr} handleDecr={handleDecr} DB={DB} />
     </div>
   );

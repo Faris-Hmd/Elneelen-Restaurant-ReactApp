@@ -4,6 +4,7 @@ import './css/index.css';
 import "./css/App.css";
 import "./css/product-d.css";
 import "./css/colors.css";
+import "./css/nav-bar.css"
 import App from './App';
 
 

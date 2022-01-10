@@ -1,10 +1,5 @@
 /** @format */
 const ItemFunc = (props) => {
-
-
-
-
-
   const handleQuShiftClass = () => {
     return props.qu === 0 ? "Shift" : "";
   };
@@ -24,12 +19,12 @@ const ItemFunc = (props) => {
         <i className="fa fa-tag fa-fw"></i> {props.cost}
       </div>
       <div className="counter-d">
-        <div className="decrease" onClick={props.handleIncr}>
-          <i className="fa fa-angle-left"></i>
+        <div className="decrease" onClick={props.handleDecr}>
+          <i className="fa fa-angle-left">-</i>
         </div>
 
-        <div className="increase" onClick={props.handleDecr}>
-          <i className="fa fa-angle-right"></i>
+        <div className="increase" onClick={props.handleIncr}>
+          <i className="fa fa-angle-right">+</i>
         </div>
       </div>
     </div>
