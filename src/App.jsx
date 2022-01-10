@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useState } from "react";
-import { useEffect } from "react/cjs/react.development";
+im
 import ItemListFunc from "./component/ItemListFunc";
 
 const App = () => {

@@ -1,5 +1,10 @@
 /** @format */
 const ItemFunc = (props) => {
+
+
+
+
+
   const handleQuShiftClass = () => {
     return props.qu === 0 ? "Shift" : "";
   };
@@ -31,4 +36,4 @@ const ItemFunc = (props) => {
   );
 };
 
-export default ItemFunc;
+  export default ItemFunc;
