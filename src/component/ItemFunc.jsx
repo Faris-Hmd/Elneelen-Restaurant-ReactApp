@@ -1,10 +1,6 @@
-/** @format */
-import { useState, useEffect } from "react";
 
-const ItemFunc = (props) => {
-  let [qu, setQu] = useState(0);
 
-  useEffect(() => {}, [qu]);
+
 
   const handleQuShiftClass = () => {
     return props.qu === 0 ? "Shift" : "";
