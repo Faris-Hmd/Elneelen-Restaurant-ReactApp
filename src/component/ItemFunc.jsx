@@ -1,11 +1,5 @@
 /** @format */
-import { useState, useEffect } from "react";
-
 const ItemFunc = (props) => {
-  let [qu, setQu] = useState(0);
-
-  useEffect(() => {}, [qu]);
-
   const handleQuShiftClass = () => {
     return props.qu === 0 ? "Shift" : "";
   };
@@ -26,11 +20,11 @@ const ItemFunc = (props) => {
       </div>
       <div className="counter-d">
         <div className="decrease" onClick={props.handleIncr}>
-          <i className="fa fa-angle-left">+</i>
+          <i className="fa fa-angle-left"></i>
         </div>
 
         <div className="increase" onClick={props.handleDecr}>
-          <i className="fa fa-angle-right">-</i>
+          <i className="fa fa-angle-right"></i>
         </div>
       </div>
     </div>
