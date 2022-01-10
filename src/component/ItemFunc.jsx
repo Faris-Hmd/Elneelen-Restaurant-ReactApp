@@ -1,6 +1,6 @@
 
 
-
+const ItemFunc = () => {
 
   const handleQuShiftClass = () => {
     return props.qu === 0 ? "Shift" : "";
