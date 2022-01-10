@@ -75,7 +75,7 @@ const App = () => {
   const handleDecr = (id) => {
     if (DB[id].qu === 0) return;
     setDB(
-      DB.m9ap((item) =>
+      DB.map((item) =>
         item.id === id ? { ...item, qu: item.qu - 1 } : { ...item }
       )
     );

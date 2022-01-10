@@ -20,11 +20,11 @@ const ItemFunc = (props) => {
       </div>
       <div className="counter-d">
         <div className="decrease" onClick={props.handleDecr}>
-          <i className="fa fa-angle-left">-</i>
+          <i className="fa fa-angle-left"></i>
         </div>
 
         <div className="increase" onClick={props.handleIncr}>
-          <i className="fa fa-angle-right">+</i>
+          <i className="fa fa-angle-right"></i>
         </div>
       </div>
     </div>
