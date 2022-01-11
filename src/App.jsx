@@ -13,7 +13,7 @@ const App = () => {
       cost: `${2000}$`,
       rating: `${4.5} /5`,
       imgUrl: "baked tilapia.jpg",
-      qu: 5,
+      qu: 1,
     },
     {
       id: 1,
@@ -93,10 +93,12 @@ const App = () => {
   };
 
   return (
-    <div className="contener-d">
-      <NavBar quantity={quantity} />
-      <ItemListFunc handleIncr={handleIncr} handleDecr={handleDecr} DB={DB} />
-    </div>
+    <>
+      <NavBar quantity={quantity} DB={DB} />
+      <div className="contener-d">
+        <ItemListFunc DB={DB} handleDecr={handleDecr} handleIncr={handleIncr} />
+      </div>
+    </>
   );
 };
 

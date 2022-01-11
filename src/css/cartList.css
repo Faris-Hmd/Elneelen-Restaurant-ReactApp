@@ -1,0 +1,70 @@
+/** @format */
+
+.cartItemContainer {
+  width: 95%;
+  height: 15vh;
+  margin: .4em auto;
+  padding: 0.2em;
+  border-radius: 8px;
+  display: flex;
+  box-shadow: -2px 2px 10px rgb(22, 21, 21);
+  color: aliceblue;
+}
+
+.cartSideMenu {
+  width: 100%;
+  height: 100vh;
+  padding-top: .8em;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  transform: translateX(100%);
+  transition: all 300ms;
+  z-index: 1;
+  background: rgb(49, 45, 43);
+  overflow: scroll;
+}
+
+.showCartSideMenu {
+  transform: translateX(0%);
+}
+
+.cartItemContainer img {
+  width: 25%;
+  border-radius: 8px;
+}
+
+.cartItemInfo {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 50%;
+  text-align: center;
+}
+
+.cartItemInfo .itemName,
+.cartItemInfo .itemCost {
+  text-align: start;
+  margin-left: 10px;
+}
+.cartItemInfo .itemCost {
+  color: rgb(0, 185, 0);
+}
+
+.cartItemQuContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+
+.cartItemQu {
+  padding: 5px 17px;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bolder;
+  color: var(--dark-clr);
+  background-color: var(--light-clr);
+  border-radius: 8px;
+  border: 0.5px solid var(--dark-clr);
+}
