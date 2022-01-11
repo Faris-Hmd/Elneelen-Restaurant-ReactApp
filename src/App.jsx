@@ -88,13 +88,13 @@ const App = () => {
         qu = qu + 1;
       }
       return null;
-    })
+    });
     return qu;
-  }
+  };
 
   return (
     <div className="contener-d">
-      <NavBar quantity={quantity}/>
+      <NavBar quantity={quantity} />
       <ItemListFunc handleIncr={handleIncr} handleDecr={handleDecr} DB={DB} />
     </div>
   );
