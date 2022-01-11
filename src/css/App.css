@@ -4,8 +4,14 @@
 body {
   font-family: "Nunito", sans-serif;
 }
+html::-webkit-scrollbar{
+ 
+  scrollbar-color: rgb(233, 9, 9);
+}
 
-
+html{
+   scrollbar-color: rgb(207, 55, 55);
+}
 
 * {
   margin: 0;

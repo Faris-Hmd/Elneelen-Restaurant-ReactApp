@@ -30,7 +30,16 @@ const NavBar = (props) => {
             <li>
               <i className="fa fa-search fa-2x"></i>
             </li>
-            <li onClick={showCartSideMenu}>{props.quantity()}</li>
+            <li onClick={showCartSideMenu}>
+              <i className="fa fa-shopping-cart fa-2x"></i>
+              <span
+                className={`cartQu ${
+                  props.quantity() === 0 ? "hideCartQu" : ""
+                }`}
+              >
+                {props.quantity()}
+              </span>
+            </li>
           </ul>
           <span className="logo ">
             <span>El</span>neelen

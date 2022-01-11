@@ -50,7 +50,9 @@ header li {
 	padding: 8px 11px;
 	transition: all 500ms;
 	color: white;
-	font-size: 12px;
+	font-size: 11px;
+	margin: auto;
+	position: relative;
 }
 
 header li:hover{
