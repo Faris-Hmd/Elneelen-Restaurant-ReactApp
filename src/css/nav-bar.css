@@ -53,6 +53,7 @@ header li {
 	font-size: 11px;
 	margin: auto;
 	position: relative;
+	cursor: pointer;
 }
 
 header li:hover{
