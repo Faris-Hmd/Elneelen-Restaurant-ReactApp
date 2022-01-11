@@ -15,7 +15,6 @@ body {
 .product-d {
   color: var(--text-clr);
   margin: 20px auto;
-  padding-bottom: .3em;
   text-transform: capitalize;
   border-radius: 10px;
   box-shadow: -2px 2px 10px #222;
@@ -78,14 +77,15 @@ body {
   justify-content: center;
   align-content: center;
   margin-left: 40%;
+  padding-bottom: .2em;
 }
 
 .increase,
 .decrease {
   padding: 0px .9em;
-  margin: .5em .3em;
+  margin: .5em .2em;
   text-align: center;
-  font-size: 1em;
+  font-size: .9em;
   font-weight: 600;
   background-color: var(--dark-clr);
   color: #eee;
