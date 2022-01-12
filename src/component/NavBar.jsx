@@ -25,7 +25,7 @@ const NavBar = (props) => {
             <li id="side-close-btn">
               <i className="fa fa-bars fa-2x"></i>
             </li>
-            <Link to="/" classNAme="Link">
+            <Link to="/" className="Link">
               <li>
                 <i className="fa fa-home fa-2x"></i>
               </li>
