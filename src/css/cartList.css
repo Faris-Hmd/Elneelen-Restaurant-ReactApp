@@ -1,6 +1,7 @@
 /** @format */
 
 .cartItemContainer {
+  height: 100px;
   width: 95%;
   margin: 0.4em auto;
   padding: 0.2em;
@@ -35,7 +36,6 @@
 }
 
 .cartItemContainer img {
-  height: 100px;
   width: 25%;
   border-radius: 8px;
 }
@@ -78,7 +78,7 @@
 .cartQu {
   background: red;
   position: absolute;
-  top:10%;
+  top: 10%;
   right: 5%;
   width: 1.3em;
   height: 1.4em;
