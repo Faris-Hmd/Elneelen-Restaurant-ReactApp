@@ -1,7 +1,7 @@
 /** @format */
 
 .cartItemContainer {
-  height: 100px;
+  min-height: 100px;
   width: 95%;
   margin: 0.4em auto;
   padding: 0.2em;
