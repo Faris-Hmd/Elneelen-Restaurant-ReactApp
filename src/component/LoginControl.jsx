@@ -28,7 +28,7 @@ class LoginControl extends React.Component {
     let passWordOne = this.state.user[userName].passWord;
     let passwordTwo = this.passWord.current.value;
 
-    passWordOne == passwordTwo
+    passWordOne === passwordTwo
       ? this.setState({ isLoggin: true })
       : this.setState({ isLoggin: false });
   };
