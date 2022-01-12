@@ -14,7 +14,7 @@
 
 .cartSideMenu {
   width: 100%;
-  min-height: 95vh;
+  height: 95%;
   padding-top: 0.8em;
   display: flex;
   flex-direction: column;
