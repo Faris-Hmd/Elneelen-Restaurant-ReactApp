@@ -1,0 +1,206 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+.Link {
+  text-decoration: none;
+}
+
+.container {
+  background-image: url("/public/image/back 4.jpeg");
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evanly;
+  width: 100%;
+}
+
+.nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.nav-con {
+  padding: 15px;
+  color: white;
+  font-size: 15px;
+
+  text-shadow: 1px 1px 20px white;
+}
+
+.sideOne,
+.sideTwo {
+  width: 100%;
+  position: ralative;
+}
+
+.sideOne {
+  background-image: linear-gradient(
+    rgba(204, 102, 0, 80%),
+    rgba(160, 81, 2, 0.4)
+  );
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+}
+
+.txt {
+  text-align: center;
+  font-weight: bold;
+  font-size: 3vh;
+  color: white;
+  margin: rgb(34, 28, 28);
+  padding: 0.8em;
+  width: 100%;
+  height: 100%;
+}
+
+.txt h1 {
+  color: gold;
+  font-style: italic;
+  text-shadow: 3px 3px 3px black;
+}
+
+.btn-order {
+  text-align: center;
+  margin: auto;
+  margin-top: 40px;
+  display: block;
+  width: 40%;
+  text-align: center;
+  background-image: linear-gradient(
+    rgba(204, 102, 0, 100%),
+    rgba(204, 102, 0, 80%)
+  );
+}
+
+.btn-order {
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: transform 500ms;
+  display: block;
+  text-shadow: 2px 2px 2px black;
+}
+
+.btn-order:hover {
+  background-color: white;
+  color: orange;
+  transform: scale(1.1);
+}
+
+footer {
+  border-top: 2px solid black;
+  width: 100%;
+  background-color: silver;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+form {
+  max-width: 95%;
+  height: 400px;
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  background: hsla(30, 10%, 75%, 70%);
+  text-align: center;
+  margin: 20px auto;
+  border-radius: 15px;
+  color: #444;
+  font-size: 12px;
+}
+
+#signUp input {
+  padding: 6px;
+  margin: 15px;
+}
+
+input {
+  width: 80%;
+  margin: 30px auto;
+  padding: 10px;
+  outline: none;
+  background: hsla(30, 0%, 100%, 0%);
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid rgb(107, 102, 102);
+  color: #222;
+  font-size: 20px;
+}
+
+input::placeholder {
+  color: #444;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+}
+
+input[type="submit"] {
+  display: inline-block;
+  width: 70%;
+  border: none;
+  margin: 10px auto;
+  background-image: linear-gradient(
+    rgba(204, 102, 0, 100%),
+    rgba(204, 102, 0, 80%)
+  );
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  transition: transform 500ms;
+  box-shadow: -2px 2px 10px rgb(99, 93, 93);
+  font-family: "Ubuntu", sans-serif;
+}
+
+form .already,
+.creatAccount {
+  font-size: 14px;
+  padding: 10px;
+}
+
+form .already span,
+.creatAccount span {
+  text-decoration: underline;
+}
+
+input[type="submit"]:focus {
+  background: white;
+  color: rgba(204, 102, 0, 100%);
+}
+
+#signUp {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  form {
+    width: 400px;
+  }
+  .txt {
+    font-size: 1.7em;
+  }
+  .sideOne,
+  .sideTwo {
+    width: 50%;
+    height: 100vh;
+  }
+}

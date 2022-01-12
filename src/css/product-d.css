@@ -1,8 +1,10 @@
 /** @format */
 body {
   transition: all 500ms;
+
 }
 .contener-d {
+  background: rgb(90, 77, 67);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;

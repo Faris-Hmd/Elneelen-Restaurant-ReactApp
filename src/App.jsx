@@ -4,6 +4,8 @@ import React from "react";
 import { useState } from "react";
 import NavBar from "./component/NavBar";
 import ItemListFunc from "./component/ItemListFunc";
+import Home from "./component/Home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const App = () => {
   const [DB, setDB] = useState([
@@ -93,12 +95,24 @@ const App = () => {
   };
 
   return (
-    <>
-      <NavBar quantity={quantity} DB={DB} />
+    <BrowserRouter>
       <div className="contener-d">
-        <ItemListFunc DB={DB} handleDecr={handleDecr} handleIncr={handleIncr} />
+        <NavBar quantity={quantity} DB={DB} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/menu"
+            element={
+              <ItemListFunc
+                DB={DB}
+                handleIncr={handleIncr}
+                handleDecr={handleDecr}
+              />
+            }
+          />
+        </Routes>
       </div>
-    </>
+    </BrowserRouter>
   );
 };
 

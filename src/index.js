@@ -3,6 +3,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./css/index.css";
+import "./css/homepage.css";
 import "./css/App.css";
 import "./css/product-d.css";
 import "./css/colors.css";

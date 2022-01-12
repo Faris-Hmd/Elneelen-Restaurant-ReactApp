@@ -2,6 +2,7 @@
 import React from "react";
 import { useState } from "react";
 import CartList from "./Cart";
+import { Link } from "react-router-dom";
 
 const NavBar = (props) => {
   const [cartShow, setCartShow] = useState("");
@@ -24,6 +25,11 @@ const NavBar = (props) => {
             <li id="side-close-btn">
               <i className="fa fa-bars fa-2x"></i>
             </li>
+            <Link to="/" classNAme="Link">
+              <li>
+                <i className="fa fa-home fa-2x"></i>
+              </li>
+            </Link>
             <li>
               <i className="fa fa-adjust fa-2x"></i>
             </li>

@@ -1,5 +1,6 @@
 /** @format */
 import React from "react";
+import { Link } from "react-router-dom";
 
 class LoginControl extends React.Component {
   constructor() {
@@ -54,9 +55,11 @@ class LoginControl extends React.Component {
           <h2>Please sigh in</h2>
           <input type="text" placeholder="UserName" ref={this.userName} />
           <input type="password" placeholder="PassWord" ref={this.passWord} />
-          <button type="submit" className="btn-order">
-            Login
-          </button>
+          <Link to="/menu">
+            <button type="submit" className="btn-order">
+              Login
+            </button>
+          </Link>
         </form>
       </div>
     );
