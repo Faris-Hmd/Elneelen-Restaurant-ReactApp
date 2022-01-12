@@ -14,7 +14,7 @@
 
 .cartSideMenu {
   width: 100%;
-  height: 50%;
+  height: 95vh;
   padding-top: 0.8em;
   display: flex;
   flex-direction: column;
@@ -70,28 +70,4 @@
   font-size: 1em;
   font-weight: bolder;
   color: var(--dark-clr);
-  background-color: var(--light-clr);
-  border-radius: 8px;
-  border: 0.5px solid var(--dark-clr);
-}
-
-.cartQu {
-  background: red;
-  position: absolute;
-  top: 10%;
-  right: 5%;
-  width: 1.3em;
-  height: 1.4em;
-  border-radius: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  align-content: center;
-  font-size: 0.9em;
-  transition: all 400ms;
-}
-
-.hideCartQu {
-  transform: scale(0);
-}
+  background
