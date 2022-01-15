@@ -4,7 +4,7 @@ body {
 
 }
 .contener-d {
-  background: hsla(27, 70%, 75%, 100%);
+  background: hsla(30, 0%, 19%, 100%);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
