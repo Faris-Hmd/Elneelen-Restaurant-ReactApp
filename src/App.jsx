@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useState } from "react";
-import NavBar from "./component/NavBar";
+
 import ItemListFunc from "./component/ItemListFunc";
 import Home from "./component/Home";
 import CartList from "./component/Cartlist";
