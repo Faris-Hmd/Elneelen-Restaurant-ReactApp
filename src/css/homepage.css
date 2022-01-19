@@ -21,7 +21,7 @@ body {
   text-decoration: none;
 }
 
-.homeContainer { 
+.homeContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evanly;
@@ -42,21 +42,13 @@ body {
 
   text-shadow: 1px 1px 20px white;
 }
-.sidesCon{
-  background-image: url("/public/image/back 4.jpeg");
-}
-
-.sideOne,
-.sideTwo {
+.welcome {
   width: 100%;
-  position: ralative;
-}
-
-.sideOne {
   background-image: linear-gradient(
     rgba(204, 102, 0, 80%),
     rgba(160, 81, 2, 0.4)
   );
+  background-image: url("/public/image/back 4.jpeg");
   -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
 }
