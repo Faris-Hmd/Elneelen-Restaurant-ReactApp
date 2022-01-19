@@ -4,7 +4,7 @@ import React from "react";
 import { useState } from "react";
 
 import ItemListFunc from "./component/ItemListFunc";
-import Home from "./component/Home";
+import Home from "./component/HomeTwo";
 import CartList from "./component/Cartlist";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ButtomNav from "./component/ButtomNav";
@@ -98,8 +98,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <div className="contener-d">
-        
+      <div className="container">
         <ButtomNav quantity={quantity} />
         <Routes>
           <Route path="/" element={<Home />} />

@@ -21,8 +21,7 @@ body {
   text-decoration: none;
 }
 
-.container {
-  background-image: url("/public/image/back 4.jpeg");
+.homeContainer { 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evanly;
@@ -41,6 +40,9 @@ body {
   font-size: 15px;
 
   text-shadow: 1px 1px 20px white;
+}
+.sidesCon{
+  background-image: url("/public/image/back 4.jpeg");
 }
 
 .sideOne,

@@ -5,7 +5,7 @@ const ItemFunc = (props) => {
   };
 
   return (
-    <div className="product-d">
+    <div className="product">
       <div className={`quantity quantity${handleQuShiftClass()}`}>
         {props.qu}
       </div>

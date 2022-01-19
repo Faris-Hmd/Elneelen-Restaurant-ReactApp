@@ -23,5 +23,6 @@ html{
   color: none;
 }
 
-
-
+.container{
+  background: hsla(30, 0%, 17%, 100%);
+}

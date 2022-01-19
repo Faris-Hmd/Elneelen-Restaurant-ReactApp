@@ -10,6 +10,7 @@ import "./css/colors.css";
 import "./css/nav-bar.css";
 import "./css/cartList.css";
 import "./css/buttomNav.css";
+import "./css/verticalSlide.css";
 import App from "./App";
 
 ReactDOM.render(

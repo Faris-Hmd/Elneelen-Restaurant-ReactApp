@@ -1,0 +1,27 @@
+/** @format */
+
+.verticalCardContainer {
+  display: flex;
+
+  width: 100%;
+  padding: 10px;
+  overflow: scroll;
+  position: relative;
+}
+
+.label {
+  font-size: 1.5em;
+  font-weight: 700;
+  padding: 10px;
+  color: aliceblue;
+
+}
+.verticalCardContainer .card {
+  border-radius: 10px;
+  margin: auto 15px;
+}
+.verticalCardContainer img {
+  width: 280px;
+  height: 170px;
+  border-radius: 9px;
+}
