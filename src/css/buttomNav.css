@@ -15,11 +15,19 @@
 }
 
 .buttomNav .buttomNavLink {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background:var( --buttomNav-clr);
   margin: auto;
-  width: 25%;
+  width: 20%;
   padding: 3px;
+  font-size: .75em;
   transition: all 300ms;
+}
+.buttomNav .disc{
+  font-size: .9em;
 }
 
 .buttomNav .buttomNavLink:hover{
