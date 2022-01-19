@@ -7,7 +7,7 @@ const VerticalSlider = () => {
   return (
     <div className="verticalCardContainer">
       <div className="card">
-        <img src="./image/back 4.jpeg" alt="" />
+        <img src="./image/steak burger.jpeg" alt="" />
       </div>
       <div className="card">
         <img src="./image/back 4.jpeg" alt="" />
