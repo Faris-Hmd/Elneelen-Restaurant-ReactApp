@@ -1,0 +1,30 @@
+/** @format */
+
+.buttomNav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  list-style: none;
+  z-index: 2;
+  backdrop-filter: blur(5px);
+}
+
+.buttomNav .buttomNavLink {
+  background:var( --buttomNav-clr);
+  margin: auto;
+  width: 25%;
+  padding: 3px;
+  transition: all 300ms;
+}
+
+.buttomNav .buttomNavLink:hover{
+  background-color: rgb(214, 214, 214);
+}
+.buttomNav .Link {
+  color: var(--dark-clr);
+}

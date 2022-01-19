@@ -17,6 +17,7 @@ body {
   --side-text-clr: #222;
   --side-clr: hsla(0, 0%, 20%, 75%);
   --side-text-clr: #eee;
+  --buttomNav-clr: rgba(255, 255, 255, 0.774);
 }
 
 .darkMode {

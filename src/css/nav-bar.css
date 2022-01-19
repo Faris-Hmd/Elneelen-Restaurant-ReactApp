@@ -56,6 +56,10 @@ header li {
 	cursor: pointer;
 }
 
+header .Link{
+	color: inherit;
+}
+
 header li:hover{
 	background-color: rgba(0, 0,0,80%);
 }

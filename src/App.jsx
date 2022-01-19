@@ -5,7 +5,9 @@ import { useState } from "react";
 import NavBar from "./component/NavBar";
 import ItemListFunc from "./component/ItemListFunc";
 import Home from "./component/Home";
+import CartList from "./component/Cartlist";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ButtomNav from "./component/ButtomNav";
 
 const App = () => {
   const [DB, setDB] = useState([
@@ -98,6 +100,7 @@ const App = () => {
     <BrowserRouter>
       <div className="contener-d">
         <NavBar quantity={quantity} DB={DB} />
+        <ButtomNav/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route
@@ -110,6 +113,7 @@ const App = () => {
               />
             }
           />
+          <Route path="/cart" element={<CartList DB={DB} />} />
         </Routes>
       </div>
     </BrowserRouter>

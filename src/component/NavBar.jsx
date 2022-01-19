@@ -1,24 +1,10 @@
 /** @format */
 import React from "react";
-import { useState } from "react";
-import CartList from "./Cart";
 import { Link } from "react-router-dom";
 
 const NavBar = (props) => {
-  const [cartShow, setCartShow] = useState("");
-  const showCartSideMenu = () => {
-    if (cartShow === "") {
-      setCartShow("showCartSideMenu");
-    } else {
-      setCartShow("");
-    }
-  };
-
   return (
     <>
-      <div className={`cartSideMenu ${cartShow}`}>
-        <CartList DB={props.DB} />
-      </div>
       <header>
         <div className="nav-bar">
           <ul>
@@ -36,15 +22,17 @@ const NavBar = (props) => {
             <li>
               <i className="fa fa-search fa-2x"></i>
             </li>
-            <li onClick={showCartSideMenu}>
-              <i className="fa fa-shopping-cart fa-2x"></i>
-              <span
-                className={`cartQu ${
-                  props.quantity() === 0 ? "hideCartQu" : ""
-                }`}
-              >
-                {props.quantity()}
-              </span>
+            <li>
+              <Link to="/cart" className="Link">
+                <i className="fa fa-shopping-cart fa-2x"></i>
+                <span
+                  className={`cartQu ${
+                    props.quantity() === 0 ? "hideCartQu" : ""
+                  }`}
+                >
+                  {props.quantity()}
+                </span>
+              </Link>
             </li>
           </ul>
           <span className="logo ">
