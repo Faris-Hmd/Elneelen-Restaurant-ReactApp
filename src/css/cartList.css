@@ -68,11 +68,12 @@
   border: 0.5px solid var(--dark-clr);
 }
 
+
 .cartQu {
   background: red;
   position: absolute;
-  top: 10%;
-  right: 5%;
+  top: 4%;
+  right: 25%;
   width: 1.3em;
   height: 1.4em;
   border-radius: 30%;

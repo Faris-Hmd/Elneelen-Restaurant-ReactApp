@@ -3,7 +3,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ButtomNav = () => {
+const ButtomNav = (props) => {
   return (
     <div>
       <div className="buttomNav">
@@ -14,6 +14,10 @@ const ButtomNav = () => {
         <Link to="/cart" className="Link buttomNavLink">
           <i className=" fa fa-shopping-cart fa-2x"></i>
           <div className="disc">Shoping cart</div>
+          <span
+            className={`cartQu ${props.quantity() === 0 ? "hideCartQu" : ""}`}
+          >
+          </span>
         </Link>
         <Link to="menu" className="Link buttomNavLink">
           <i className=" fa fa-home fa-2x"></i>

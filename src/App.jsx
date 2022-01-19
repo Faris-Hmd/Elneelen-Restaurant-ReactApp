@@ -99,8 +99,8 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="contener-d">
-        <NavBar quantity={quantity} DB={DB} />
-        <ButtomNav/>
+        
+        <ButtomNav quantity={quantity} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route
