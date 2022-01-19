@@ -7,17 +7,17 @@ const ButtomNav = () => {
   return (
     <div>
       <div className="buttomNav">
-        <Link to="/menu" className="Link buttomNavLink">
+        <Link to="/" className="Link buttomNavLink">
           <i className=" fa fa-home fa-2x"></i>
           <div className="disc">Home</div>
         </Link>
-        <Link to="/fav" className="Link buttomNavLink">
+        <Link to="/cart" className="Link buttomNavLink">
           <i className=" fa fa-shopping-cart fa-2x"></i>
-          <div className="disc">Home</div>
+          <div className="disc">Shoping cart</div>
         </Link>
-        <Link to="cart" className="Link buttomNavLink">
+        <Link to="menu" className="Link buttomNavLink">
           <i className=" fa fa-home fa-2x"></i>
-          <div className="disc">Deliverly</div>
+          <div className="disc">Menu</div>
         </Link>
         <Link to="cart" className="Link buttomNavLink">
           <i className=" fa fa-home fa-2x"></i>
