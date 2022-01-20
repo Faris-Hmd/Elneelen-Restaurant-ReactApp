@@ -19,7 +19,8 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 20px;
+  padding: 10px;
+  padding-top: 50px;
 }
 
 .profileDetail .username {
@@ -29,7 +30,7 @@
 .profileOthion {
   background: var(--primary-clr);
   box-shadow: 2px 2px 5px var(--shadow-clr);
-  padding: 15px;
+  padding: 12px;
   margin: 10px 0;
   font-size: 1.2rem;
 }
