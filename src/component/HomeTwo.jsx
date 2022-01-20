@@ -4,9 +4,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
-const VerticalSlider = () => {
+const HorizontalSlider = () => {
   return (
-    <div className="verticalCardContainer">
+    <div className="horizontalCardContainer">
       <div className="card">
         <img src="./image/steak burger.jpeg" alt="" />
       </div>
@@ -22,6 +22,10 @@ const VerticalSlider = () => {
     </div>
   );
 };
+
+const Categories = () => {
+  
+}
 
 const Home = () => {
   return (
@@ -47,9 +51,9 @@ const Home = () => {
           </div>
         </div>
       <div className="label">Offers </div>
-      <VerticalSlider />
+      <HorizontalSlider />
       <div className="label">Top Paied </div>
-      <VerticalSlider />
+      <HorizontalSlider />
     </div>
   );
 };
