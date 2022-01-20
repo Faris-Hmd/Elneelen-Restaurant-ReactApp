@@ -3,12 +3,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
 body {
   font-family: "Nunito", sans-serif;
-  color: var(--text-clr);
+  color:#222 ;
 }
 
 .Link{
   text-decoration: none;
-  color: #eee;
+  color: rgb(20, 19, 19);
 }
 * {
   margin: 0;
@@ -17,5 +17,5 @@ body {
 }
 
 .container{
-  background: hsla(30, 0%, 17%, 100%);
+  background: #e5e5e5;
 }

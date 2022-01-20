@@ -13,8 +13,8 @@ body {
   transition: all 500ms;
 }
 .product {
-  background: hsla(30, 0%, 17%, 100%);
-  color: var(--text-clr);
+  background: var(--primary-clr);
+  color: black;
   margin: 20px auto;
   text-transform: capitalize;
   border-radius: 10px;
