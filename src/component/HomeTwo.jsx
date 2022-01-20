@@ -23,9 +23,7 @@ const HorizontalSlider = () => {
   );
 };
 
-const Categories = () => {
-  
-}
+
 
 const Home = () => {
   return (
