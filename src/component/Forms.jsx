@@ -1,17 +1,32 @@
 /** @format */
 
-import React from 'react'
+import React from "react";
+import { useRef } from "react";
+const Forms = (props) => {
+  const userName = useRef("");
+  const password = useRef("");
 
-const Forms = () => {
-    return (
-        <div>
-            <form id="signIn">
+  const handleSignIn = () => {
+    props.user.map((user) => {
+      if (user.name === userName.current.value) {
+        if (user.password === password.current.value) {
+          props.currentUser(userName.current.value);
+          props.isLoggin(true);
+        }
+      }
+      return null;
+    });
+  };
+
+  return (
+    <div>
+      <form id="signIn" onSubmit={handleSignIn}>
         <i className="fa fa-user fa-2x"></i>
-        <input type="text" placeholder="Username" />
+        <input type="text" placeholder="Username" ref={userName} />
         <br />
         <i className="fa fa-lock fa-2x"></i>
-        <input type="password" placeholder="Password" />
-        <input type="submit" value="Log in" />
+        <input type="password" placeholder="Password" ref={password} />
+        <input value="Log in" type="submit" />
         <div className="creatAccount">
           haven’t account?
           <span>Creat Now</span>
@@ -37,8 +52,8 @@ const Forms = () => {
           <span>Login</span>
         </div>
       </form>
-        </div>
-    )
-}
+    </div>
+  );
+};
 
-export default Forms
+export default Forms;

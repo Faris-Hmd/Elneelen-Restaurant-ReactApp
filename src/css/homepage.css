@@ -29,6 +29,7 @@
   background-image: url("/public/image/back 4.jpeg");
   -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
+  box-shadow: 5px 5px 5px var(--shadow-clr);
 }
 
 .txt {
@@ -161,6 +162,10 @@ input[type="submit"]:focus {
 }
 
 #signUp {
+  display: none;
+}
+
+.hide{
   display: none;
 }
 

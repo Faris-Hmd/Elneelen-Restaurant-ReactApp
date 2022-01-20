@@ -7,8 +7,20 @@ import CartList from "./component/Cartlist";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ButtomNav from "./component/ButtomNav";
 import ProductList from "./component/ProductList";
+import Profile from "./component/Profile";
 
 const App = () => {
+  const isLoggin = (islog = false) => {
+    console.log(islog);
+    return islog;
+  };
+
+  const currentUser = (currentUser) => {
+    const currentUserDetails = user.map((user) => {
+      return user.name === currentUser ? { user } : {};
+    });
+    return currentUserDetails;
+  };
   const [user, setUser] = useState([
     {
       name: "faris",
@@ -23,7 +35,6 @@ const App = () => {
     },
   ]);
 
-  
   const [products, setProducts] = useState([
     {
       id: 0,
@@ -139,7 +150,8 @@ const App = () => {
     },
   ];
 
-  const handleIncr = (id) => {setUser();
+  const handleIncr = (id) => {
+    setUser();
     setProducts(
       products.map((item) =>
         item.id === id ? { ...item, qu: item.qu + 1 } : { ...item }
@@ -184,8 +196,18 @@ const App = () => {
             }
           />
           <Route
+            path="/profile"
+            element={
+              <Profile
+                user={user}
+                isLoggin={isLoggin}
+                currentUser={currentUser}
+              />
+            }
+          />
+          <Route
             path="/cart"
-            element={<CartList products={products} user={user} />}
+            element={<CartList products={products} user={currentUser} />}
           />
         </Routes>
       </div>

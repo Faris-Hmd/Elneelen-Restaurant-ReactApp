@@ -9,6 +9,7 @@
   display: flex;
   width: 100%;
   padding: 10px;
+  background: var(--primary-clr);
   overflow: scroll;
   position: relative;
   scroll-behavior: smooth;
@@ -36,7 +37,7 @@
 }
 
 .category {
- 
+ background: var(--primary-clr);
   width: 28%;
   height: 120px;
   margin: 20px auto;
@@ -49,9 +50,11 @@
    display: flex;
   justify-content: center;
   width: 100%;
+  
 }
 .category img {
   width: 60%;
+  height: 80px;
 }
 .catygoryName {
   width: 100%;
