@@ -8,6 +8,7 @@ body {
 
 .Link{
   text-decoration: none;
+  color: #eee;
 }
 * {
   margin: 0;

@@ -2,92 +2,151 @@
 
 import React from "react";
 import { useState } from "react";
-
-import ItemListFunc from "./component/ItemListFunc";
-import Home from "./component/HomeTwo";
+import Home from "./component/Home";
 import CartList from "./component/Cartlist";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ButtomNav from "./component/ButtomNav";
+import ProductList from "./component/ProductList";
 
 const App = () => {
-  const [DB, setDB] = useState([
-    {
-      id: 0,
-      name: "baked tilapia",
-      cost: `${2000}$`,
-      rating: `${4.5} /5`,
-      imgUrl: "baked tilapia.jpg",
-      qu: 1,
-    },
-    {
-      id: 1,
-      name: "bbq burger",
-      cost: `${1300}$`,
-      rating: `${2.5} /5`,
-      imgUrl: "bbq burger.jpeg",
-      qu: 0,
-    },
-    {
-      id: 2,
-      name: "Braised Oxtail Burger",
-      cost: `${1450}$`,
-      rating: `${4.2} /5`,
-      imgUrl: "Braised Oxtail Burger .jpeg",
-      qu: 0,
-    },
-    {
-      id: 3,
-      name: "Black Bean Burgers",
-      cost: `${500}$`,
-      rating: `${3.2} /5`,
-      imgUrl: "Black Bean Burgers .jpeg",
-      qu: 0,
-    },
-    {
-      id: 4,
-      name: "Braised Oxtail Burger",
-      cost: `${800}$`,
-      rating: `${3.7} /5`,
-      imgUrl: "Braised Oxtail Burger .jpeg",
-      qu: 0,
-    },
-    {
-      id: 5,
-      name: "Black Bean Burgersish",
-      cost: `${700}$`,
-      rating: `${3.5} /5`,
-      imgUrl: "Black Bean Burgers .jpeg",
-      qu: 0,
-    },
-    {
-      id: 6,
-      name: "baked tilapia",
-      cost: `${1000}$`,
-      rating: `${4.5} /5`,
-      imgUrl: "baked tilapia.jpg",
-      qu: 0,
-    },
-  ]);
+  const [DB, setDB] = useState({
+    product: [
+      {
+        id: 0,
+        name: "baked tilapia",
+        cost: `${2000}$`,
+        rating: `${4.9} /5`,
+        imgUrl: "baked tilapia.jpg",
+        qu: 1,
+      },
+      {
+        id: 1,
+        name: "bbq burger",
+        cost: `${1300}$`,
+        rating: `${2.5} /5`,
+        imgUrl: "bbq burger.jpeg",
+        qu: 2,
+      },
+      {
+        id: 2,
+        name: "Braised Oxtail Burger",
+        cost: `${1450}$`,
+        rating: `${4.2} /5`,
+        imgUrl: "Braised Oxtail Burger .jpeg",
+        qu: 0,
+      },
+      {
+        id: 3,
+        name: "Black Bean Burgers",
+        cost: `${500}$`,
+        rating: `${3.2} /5`,
+        imgUrl: "Black Bean Burgers .jpeg",
+        qu: 0,
+      },
+      {
+        id: 4,
+        name: "Braised Oxtail Burger",
+        cost: `${800}$`,
+        rating: `${3.7} /5`,
+        imgUrl: "Braised Oxtail Burger .jpeg",
+        qu: 0,
+      },
+      {
+        id: 5,
+        name: "Black Bean Burgersish",
+        cost: `${700}$`,
+        rating: `${3.5} /5`,
+        imgUrl: "Black Bean Burgers .jpeg",
+        qu: 0,
+      },
+      {
+        id: 6,
+        name: "baked tilapia",
+        cost: `${1000}$`,
+        rating: `${4.5} /5`,
+        imgUrl: "baked tilapia.jpg",
+        qu: 0,
+      },
+    ],
+
+    categories: [
+      {
+        id: 1,
+        name: "burger",
+        imgUrl: "baked tilapia.jpg",
+        path: `cart`,
+      },
+      {
+        id: 2,
+        name: "Cold drink",
+        imgUrl: "Black Bean Burgers .jpeg",
+        path: "menu",
+      },
+      {
+        id: 3,
+        name: "Sandwich",
+        imgUrl: "",
+        path: "",
+      },
+      {
+        id: 4,
+        name: "Icecream",
+        imgUrl: "",
+        path: "",
+      },
+      {
+        id: 5,
+        name: "Pizza",
+        imgUrl: "",
+        path: "",
+      },
+      {
+        id: 6,
+        name: "Hot Drik",
+        imgUrl: "",
+        path: "",
+      },
+      {
+        id: 7,
+        name: "burger",
+        imgUrl: "",
+        path: "",
+      },
+      {
+        id: 8,
+        name: "burger",
+        imgUrl: "",
+        path: "",
+      },
+      {
+        id: 9,
+        name: "burger",
+        imgUrl: "",
+        path: "",
+      },
+    ],
+  });
   const handleIncr = (id) => {
-    setDB(
-      DB.map((item) =>
+   setDB(
+      DB.product.map((item) =>
         item.id === id ? { ...item, qu: item.qu + 1 } : { ...item }
       )
     );
   };
 
   const handleDecr = (id) => {
-    if (DB[id].qu === 0) return;
+    if (DB.product[id].qu === 0) return;
     setDB(
-      DB.map((item) =>
+      DB.product.map((item) =>
         item.id === id ? { ...item, qu: item.qu - 1 } : { ...item }
       )
     );
   };
 
+
   const quantity = () => {
     let qu = 0;
-    DB.map((item) => {
+    DB.product.map((item) => {
       if (item.qu > 0) {
         qu = qu + 1;
       }
@@ -101,11 +160,11 @@ const App = () => {
       <div className="container">
         <ButtomNav quantity={quantity} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home DB={DB} />} />
           <Route
             path="/menu"
             element={
-              <ItemListFunc
+              <ProductList
                 DB={DB}
                 handleIncr={handleIncr}
                 handleDecr={handleDecr}
