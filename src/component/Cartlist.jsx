@@ -1,7 +1,7 @@
 /** @format */
 
 const CartList = (props) => {
-  const cart = props.DB.product.filter((item) => item.qu !== 0);
+  const cart = props.products.filter((item) => item.qu !== 0);
 
   const CartItem = (props) => {
     return (

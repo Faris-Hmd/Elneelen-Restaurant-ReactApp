@@ -3,7 +3,7 @@
 import React from "react";
 
 const ProductList = (props) => {
-  let itemList = props.DB.product;
+  let products = props.products;
 
   const Product = (props) => {
     const handleQuShiftClass = () => {
@@ -39,7 +39,7 @@ const ProductList = (props) => {
 
   return (
     <div className="productContainer">
-      {itemList.map((item) => {
+      {products.map((item) => {
         return (
           <Product
             key={item.id}
