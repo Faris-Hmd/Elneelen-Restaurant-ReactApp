@@ -23,7 +23,49 @@ const HorizontalSlider = () => {
   );
 };
 
+const Categories = () => {
+  return (
+    <div className="categories">
+      <div className="category">
+        <img src="./image/back 4.jpeg" alt="" />
+        <div className="catygoryName"></div>
+      </div>
+      <div className="category">
+        <img src="./image/back 4.jpeg" alt="" />
+        <div className="catygoryName"></div>
+      </div>
+      <div className="category">
+        <img src="./image/back 4.jpeg" alt="" />
+        <div className="catygoryName"></div>
+      </div>
+      <div className="category">
+        <img src="./image/back 4.jpeg" alt="" />
+        <div className="catygoryName"></div>
+      </div>
+      <div className="category">
+        <img src="./image/back 4.jpeg" alt="" />
+        <div className="catygoryName">sandwich</div>
+      </div>
+      <div className="category">
+        <img src="./image/back 4.jpeg" alt="" />
+        <div className="catygoryName">pizzza</div>
+      </div>
+      <div className="category">
+        <img src="./image/back 4.jpeg" alt="" />
+        <div className="catygoryName">burger</div>
+      </div>
+      <div className="category">
+        <img src="./image/logo192.png" alt="" />
+        <div className="catygoryName">pizza</div>
+      </div>
+      <div className="category">
+        <img src="./image/back 4.jpeg" alt="" />
+        <div className="catygoryName">burger</div>
+      </div>
+    </div>
+  );
 
+}
 
 const Home = () => {
   return (
@@ -50,6 +92,7 @@ const Home = () => {
         </div>
       <div className="label">Offers </div>
       <HorizontalSlider />
+      <Categories/>
       <div className="label">Top Paied </div>
       <HorizontalSlider />
     </div>

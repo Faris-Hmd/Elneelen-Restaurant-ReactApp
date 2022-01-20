@@ -8,7 +8,6 @@
   position: relative;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  scroll-padding: 50%;
 }
 
 .label {
@@ -18,17 +17,46 @@
   padding-top: 30px;
 }
 .horizontalCardContainer .card {
-  border-radius: 10px;
+  width: 300px;
+  height: 200px;
   margin: auto 15px;
+  border-radius: 10px;
   box-shadow: -2px 2px 10px rgb(20, 20, 20);
-  scroll-snap-type: center;
-  background: turquoise;
-  width: 280px;
-  height: 180px;
+  scroll-snap-align: start;
 }
 .horizontalCardContainer img {
   height: inherit;
   width: inherit;
-  border-radius: 9px;
-  object-fit: cover;
+  border-radius: 8px;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.category {
+  width: 30%;
+  height: 120px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: -2px 2px 10px rgb(20, 20, 20);
+  position: relative;
+  overflow: hidden;
+}
+
+.category img {
+  width: 100%;
+  height: inherit;
+}
+.catygoryName {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  bottom: 5px;
+  font-size: 1.1rem;
+  color: #222;
+  font-weight: bolder;
 }
