@@ -7,7 +7,9 @@ const Categories = (props) => {
     return (
       <div className="category">
         <Link to={`/${props.path}`} className="Link">
-          <img src={`./image/${props.imgUrl}`} alt="Category" />
+          <div className="imgContainer">
+            <img src={`./image/${props.imgUrl}`} alt="Category" />
+          </div>
           <div className="catygoryName">{props.name}</div>
         </Link>
       </div>

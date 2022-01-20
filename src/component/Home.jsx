@@ -8,16 +8,16 @@ const HorizontalSlider = () => {
   return (
     <div className="horizontalCardContainer">
       <div className="card">
-        <img src="./image/steak burger.jpeg" alt="" />
+        <img src="./image/3559503.jpg" alt="" />
       </div>
       <div className="card">
-        <img src="./image/back 4.jpeg" alt="" />
+        <img src="./image/3559503.jpg" alt="" />
       </div>
       <div className="card">
-        <img src="./image/back 4.jpeg" alt="" />
+        <img src="./image/3559503.jpg" alt="" />
       </div>
       <div className="card">
-        <img src="./image/back 4.jpeg" alt="" />
+        <img src="./image/3559503.jpg" alt="" />
       </div>
     </div>
   );
@@ -50,7 +50,7 @@ const Home = (props) => {
       <div className="label">Offers </div>
       <HorizontalSlider />
       <div className="label">Categories </div>
-      <Categories categories={props.DB.categories} />
+      <Categories categories={props.categories} />
       <div className="label">Top Paied </div>
       <HorizontalSlider />
     </div>

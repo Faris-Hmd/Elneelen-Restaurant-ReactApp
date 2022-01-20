@@ -20,7 +20,7 @@ body {
   border-radius: 10px;
   box-shadow: -2px 2px 20px rgb(155, 154, 154);
   position: relative;
-  width: 45%;
+  width: 47%;
   transition: all 500ms;
   overflow: hidden;
 }
@@ -48,7 +48,7 @@ body {
   top: 0%;
   left: 0%;
   border: 0.5px solid var(--dark-clr);
-  transition: all 300ms;
+  transition: all 400ms;
 }
 .quantityShift {
   transform: translateY(-100%);

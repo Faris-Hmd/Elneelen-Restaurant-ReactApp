@@ -9,6 +9,21 @@ import ButtomNav from "./component/ButtomNav";
 import ProductList from "./component/ProductList";
 
 const App = () => {
+  const [user, setUser] = useState([
+    {
+      name: "faris",
+      password: "faris",
+      cart: [1, 2, 3],
+    },
+
+    {
+      name: "hmd",
+      password: "hmd",
+      cart: [5, 5, 3],
+    },
+  ]);
+
+  
   const [products, setProducts] = useState([
     {
       id: 0,
@@ -67,67 +82,64 @@ const App = () => {
       qu: 0,
     },
   ]);
-  const DB = {
-    products: [],
-    categories: [
-      {
-        id: 1,
-        name: "burger",
-        imgUrl: "baked tilapia.jpg",
-        path: `cart`,
-      },
-      {
-        id: 2,
-        name: "Cold drink",
-        imgUrl: "Black Bean Burgers .jpeg",
-        path: "menu",
-      },
-      {
-        id: 3,
-        name: "Sandwich",
-        imgUrl: "",
-        path: "",
-      },
-      {
-        id: 4,
-        name: "Icecream",
-        imgUrl: "",
-        path: "",
-      },
-      {
-        id: 5,
-        name: "Pizza",
-        imgUrl: "",
-        path: "",
-      },
-      {
-        id: 6,
-        name: "Hot Drik",
-        imgUrl: "",
-        path: "",
-      },
-      {
-        id: 7,
-        name: "burger",
-        imgUrl: "",
-        path: "",
-      },
-      {
-        id: 8,
-        name: "burger",
-        imgUrl: "",
-        path: "",
-      },
-      {
-        id: 9,
-        name: "burger",
-        imgUrl: "",
-        path: "",
-      },
-    ],
-  };
+  const categories = [
+    {
+      id: 1,
+      name: "burger",
+      imgUrl: "burgerCate.png",
+      path: `cart`,
+    },
+    {
+      id: 2,
+      name: "Cold drink",
+      imgUrl: "Black Bean Burgers .jpeg",
+      path: "menu",
+    },
+    {
+      id: 3,
+      name: "Pizza",
+      imgUrl: "pizzaCate.png",
+      path: "",
+    },
+    {
+      id: 4,
+      name: "Icecream",
+      imgUrl: "",
+      path: "",
+    },
+    {
+      id: 5,
+      name: "Pizza",
+      imgUrl: "",
+      path: "",
+    },
+    {
+      id: 6,
+      name: "Hot Drik",
+      imgUrl: "",
+      path: "",
+    },
+    {
+      id: 7,
+      name: "burger",
+      imgUrl: "",
+      path: "",
+    },
+    {
+      id: 8,
+      name: "burger",
+      imgUrl: "",
+      path: "",
+    },
+    {
+      id: 9,
+      name: "burger",
+      imgUrl: "",
+      path: "",
+    },
+  ];
 
-  const handleIncr = (id) => {
+  const handleIncr = (id) => {setUser();
     setProducts(
       products.map((item) =>
         item.id === id ? { ...item, qu: item.qu + 1 } : { ...item }
@@ -160,7 +172,7 @@ const App = () => {
       <div className="container">
         <ButtomNav quantity={quantity} />
         <Routes>
-          <Route path="/" element={<Home DB={DB} />} />
+          <Route path="/" element={<Home categories={categories} />} />
           <Route
             path="/menu"
             element={
@@ -171,7 +183,10 @@ const App = () => {
               />
             }
           />
-          <Route path="/cart" element={<CartList products={products} />} />
+          <Route
+            path="/cart"
+            element={<CartList products={products} user={user} />}
+          />
         </Routes>
       </div>
     </BrowserRouter>

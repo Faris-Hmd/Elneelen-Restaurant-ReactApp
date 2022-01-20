@@ -2,6 +2,7 @@
 
 const CartList = (props) => {
   const cart = props.products.filter((item) => item.qu !== 0);
+  console.log(props.user[1].cart);
 
   const CartItem = (props) => {
     return (
