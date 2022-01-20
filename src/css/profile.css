@@ -26,11 +26,10 @@
   padding: 10px;
   font-size: 1.3rem;
 }
-.profileOthionCon {
-}
 .profileOthion {
   background: var(--primary-clr);
   box-shadow: 2px 2px 5px var(--shadow-clr);
   padding: 15px;
   margin: 10px 0;
+  font-size: 1.2rem;
 }

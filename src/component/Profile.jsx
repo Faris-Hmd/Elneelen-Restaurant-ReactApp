@@ -9,7 +9,7 @@ const Profile = (props) => {
         <div className="profileImg">
           <img src="./image/back 4.jpeg" alt="" />
         </div>
-        <div className="username">Faris Hmd</div>
+        <div className="username">@Faris Hmd</div>
       </div>
       <div className="profileOthionCon">
         <div className="profileOthion">My profile</div>

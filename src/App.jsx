@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ButtomNav from "./component/ButtomNav";
 import ProductList from "./component/ProductList";
 import Profile from "./component/Profile";
+import TopNav from "./component/TopNav";
 
 const App = () => {
   const isLoggin = (islog = false) => {
@@ -182,6 +183,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="container">
+        <TopNav />
         <ButtomNav quantity={quantity} />
         <Routes>
           <Route path="/" element={<Home categories={categories} />} />
