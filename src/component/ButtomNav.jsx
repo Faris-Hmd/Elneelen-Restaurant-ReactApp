@@ -27,9 +27,9 @@ const ButtomNav = (props) => {
           <i className=" fa fa-home fa-2x"></i>
           <div className="disc">Deliverly</div>
         </Link>
-        <Link to="profile" className="Link buttomNavLink">
-          <i className=" fa fa-user fa-2x"></i>
-          <div className="disc">Profile</div>
+        <Link to="settings" className="Link buttomNavLink">
+          <i className=" fa fa-gear fa-2x"></i>
+        <div className="disc">Settings</div>
         </Link>
       </div>
     </div>

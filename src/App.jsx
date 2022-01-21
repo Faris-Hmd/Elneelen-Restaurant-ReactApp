@@ -11,17 +11,11 @@ import Settings from "./component/Settings";
 import TopNav from "./component/TopNav";
 
 const App = () => {
-  const isLoggin = (islog = false) => {
+  const isLoggin = (islog = 0) => {
     console.log(islog);
     return islog;
   };
 
-  const currentUser = (currentUser) => {
-    const currentUserDetails = user.map((user) => {
-      return user.name === currentUser ? { user } : {};
-    });
-    return currentUserDetails;
-  };
   const [user, setUser] = useState([
     {
       name: "faris",
@@ -94,6 +88,13 @@ const App = () => {
       qu: 0,
     },
   ]);
+
+  const [currentUser, setCurrentUser] = useState({});
+  const handleSetCurrentUser = (currentUser) => {
+    const currentUserDetails = user.filter((user) => user.name === currentUser);
+    setCurrentUser(currentUserDetails[0]);
+  };
+
   const categories = [
     {
       id: 1,
@@ -198,12 +199,13 @@ const App = () => {
             }
           />
           <Route
-            path="/profile"
+            path={`/settings`}
             element={
               <Settings
-                user={user}
                 isLoggin={isLoggin}
                 currentUser={currentUser}
+                user={user}
+                handleSetCurrentUser={handleSetCurrentUser}
               />
             }
           />

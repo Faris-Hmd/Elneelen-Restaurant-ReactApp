@@ -6,12 +6,13 @@ const Forms = (props) => {
   const userName = useRef("");
   const password = useRef("");
 
-  const handleSignIn = () => {
+  const handleSignIn = (e) => {
+    e.preventDefault();
     props.user.map((user) => {
       if (user.name === userName.current.value) {
         if (user.password === password.current.value) {
-          props.currentUser(userName.current.value);
           props.isLoggin(true);
+          props.handleSetCurrentUser(userName.current.value);
         }
       }
       return null;
