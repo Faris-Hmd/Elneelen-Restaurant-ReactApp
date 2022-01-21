@@ -1,12 +1,13 @@
 /** @format */
 import { Link } from "react-router-dom";
+
 ///////////////// CATEGORIES COMPONENT ////////////////
 const Categories = (props) => {
   const categories = props.categories;
   const Category = (props) => {
     return (
       <div className="category">
-        <Link to={`/${props.path}`} className="Link">
+        <Link to={`/menu/${props.path}`} className="Link">
           <div className="imgContainer">
             <img src={`./image/${props.imgUrl}`} alt="Category" />
           </div>

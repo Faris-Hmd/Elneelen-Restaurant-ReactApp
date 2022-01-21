@@ -1,10 +1,7 @@
 /** @format */
-
-import Forms from "./Forms";
-
+import { Link } from "react-router-dom";
 /** @format */
 const Settings = (props) => {
-  
   const Profile = (props) => {
     return (
       <div className="profileCon">
@@ -19,11 +16,14 @@ const Settings = (props) => {
   return (
     <div className="settingsCon ">
       <div className={`${props.isLog ? "hide" : ""} `}>
-        <Forms
-          handleSetCurrentUser={props.handleSetCurrentUser}
-          user={props.user}
-          setIsLog={props.setIsLog}
-        />
+        <div className="signInMassegeCon">
+          <div className="signInMassege">
+            You must sign in first to accese this page
+          </div>
+          <Link className="signInButton" to="/signin">
+            Sign In
+          </Link>
+        </div>
       </div>
       <div className={`${props.isLog ? "" : "hide"}`}>
         <Profile userName={props.currentUser.name} />

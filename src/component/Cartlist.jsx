@@ -1,6 +1,5 @@
 /** @format */
-
-import Forms from "./Forms";
+import { Link } from "react-router-dom";
 
 const CartList = (props) => {
   const cart = props.products.filter((item) => item.qu !== 0);
@@ -22,12 +21,15 @@ const CartList = (props) => {
 
   return (
     <>
-      <div className={`${props.isLog ? "hide" : ""}`}>
-        <Forms
-          handleSetCurrentUser={props.handleSetCurrentUser}
-          user={props.user}
-          setIsLog={props.setIsLog}
-        />
+      <div className={`${props.isLog ? "hide" : ""} `}>
+        <div className="signInMassegeCon">
+          <div className="signInMassege">
+            You must sign in first to accese this page
+          </div>
+          <Link className="signInButton" to="/signin">
+            Sign In
+          </Link>
+        </div>
       </div>
       <div className={`cart ${props.isLog ? "" : "hide"} `}>
         {cart.map((item) => {

@@ -1,5 +1,5 @@
 /** @format */
-.settingsCon{
+.settingsCon {
   height: 100vh;
 }
 .profileCon {
@@ -33,4 +33,43 @@
   padding: 10px;
   margin: 2px 0;
   font-size: 1.1rem;
+}
+
+.signInMassegeCon {
+  background: var(--primary-clr);
+  width: 80%;
+  height: 60vh;
+  margin: 10vh auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: -5px 5px 20px var(--shadow-clr);
+  border-radius: 7px;
+  overflow: hidden;
+}
+.signInMassege {
+  background-color: rgba(255, 0, 0, 0.13);
+  border: 2px solid rgba(255, 0, 0, 0.281);
+  padding: 30px;
+  margin: auto;
+  width: 90%;
+  border-radius: 7px;
+  box-shadow: -2px 2px 20px var(--shadow-clr);
+}
+
+.signInMassegeCon .signInButton {
+  background: var(--dark-clr);
+  padding: 15px;
+  width: 80%;
+  margin: auto;
+  box-shadow: -2px 2px 20px var(--shadow-clr);
+  border-radius: 7px;
+  color: #222;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 300ms;
+}
+.signInMassegeCon .signInButton:hover {
+  transform: scale(1.03);
 }

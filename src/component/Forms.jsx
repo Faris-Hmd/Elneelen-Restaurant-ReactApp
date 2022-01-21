@@ -2,7 +2,9 @@
 
 import React from "react";
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 const Forms = (props) => {
+  const history = useNavigate();
   const userName = useRef("");
   const password = useRef("");
 
@@ -12,7 +14,11 @@ const Forms = (props) => {
       if (user.name === userName.current.value) {
         if (user.password === password.current.value) {
           props.setIsLog(true);
-          props.handleSetCurrentUser(userName.current.value);
+          const currentUserDetails = props.user.filter(
+            (user) => user.name === userName.current.value
+          );
+          props.setCurrentUser(currentUserDetails[0]);
+          history("/");
         }
       }
       return null;

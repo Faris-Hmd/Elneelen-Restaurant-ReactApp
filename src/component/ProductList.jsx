@@ -1,9 +1,12 @@
 /** @format */
 
 import React from "react";
-
+import { useParams } from "react-router-dom";
 const ProductList = (props) => {
-  let products = props.products;
+  const { category } = useParams();
+  let products = props.products.filter(
+    (product) => product.category === category
+  );
 
   const Product = (props) => {
     const handleQuShiftClass = () => {
@@ -16,7 +19,7 @@ const ProductList = (props) => {
           {props.qu}
         </div>
         <div>
-          <img alt="kind" src={`image/${props.imgUrl}`} />
+          <img alt="kind" src={`/image/${props.imgUrl}`} />
         </div>
         <div className="desc">{props.name}</div>
         <div className="rating">Rating: {props.rating}</div>

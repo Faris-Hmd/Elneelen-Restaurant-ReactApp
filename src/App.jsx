@@ -9,7 +9,7 @@ import ButtomNav from "./component/ButtomNav";
 import ProductList from "./component/ProductList";
 import Settings from "./component/Settings";
 import TopNav from "./component/TopNav";
-
+import Forms from "./component/Forms";
 
 const App = () => {
   const [isLog, setIsLog] = useState(false);
@@ -18,13 +18,16 @@ const App = () => {
     {
       name: "faris",
       password: "faris",
-      cart: [1, 2, 3],
+      cart: [{ id: 1, qu: 1 }],
     },
 
     {
       name: "hmd",
       password: "hmd",
-      cart: [5, 5, 3],
+      cart: [
+        { id: 1, qu: 1 },
+        { id: 2, qu: 2 },
+      ],
     },
   ]);
 
@@ -35,6 +38,7 @@ const App = () => {
       cost: `${2000}$`,
       rating: `${4.9} /5`,
       imgUrl: "baked tilapia.jpg",
+      category: "pizza",
       qu: 1,
     },
     {
@@ -43,6 +47,7 @@ const App = () => {
       cost: `${1300}$`,
       rating: `${2.5} /5`,
       imgUrl: "bbq burger.jpeg",
+      category: "pizza",
       qu: 2,
     },
     {
@@ -59,6 +64,7 @@ const App = () => {
       cost: `${500}$`,
       rating: `${3.2} /5`,
       imgUrl: "Black Bean Burgers .jpeg",
+      category: "burger",
       qu: 0,
     },
     {
@@ -67,6 +73,7 @@ const App = () => {
       cost: `${800}$`,
       rating: `${3.7} /5`,
       imgUrl: "Braised Oxtail Burger .jpeg",
+      category: "burger",
       qu: 0,
     },
     {
@@ -75,6 +82,7 @@ const App = () => {
       cost: `${700}$`,
       rating: `${3.5} /5`,
       imgUrl: "Black Bean Burgers .jpeg",
+      category: "burger",
       qu: 0,
     },
     {
@@ -83,28 +91,23 @@ const App = () => {
       cost: `${1000}$`,
       rating: `${4.5} /5`,
       imgUrl: "baked tilapia.jpg",
+      category: "burger",
       qu: 0,
     },
   ]);
-
-  const handleSetCurrentUser = (currentUser) => {
-    const currentUserDetails = user.filter((user) => user.name === currentUser);
-    setCurrentUser(currentUserDetails[0]);
-    setIsLog(true);
-  };
 
   const categories = [
     {
       id: 1,
       name: "burger",
       imgUrl: "burgerCate.png",
-      path: `cart`,
+      path: `burger`,
     },
     {
       id: 2,
       name: "Cold drink",
       imgUrl: "Black Bean Burgers .jpeg",
-      path: "menu",
+      path: "pizza",
     },
     {
       id: 3,
@@ -182,12 +185,24 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="container">
-        <TopNav />
         <ButtomNav quantity={quantity} />
+        <TopNav />
         <Routes>
           <Route path="/" element={<Home categories={categories} />} />
           <Route
-            path="/menu"
+            path="/signin"
+            element={
+              <Forms
+                user={user}
+                isLog={isLog}
+                setIsLog={setIsLog}
+                currentUser={currentUser}
+                setCurrentUser={setCurrentUser}
+              />
+            }
+          />
+          <Route
+            path="/menu/:category"
             element={
               <ProductList
                 products={products}
@@ -204,7 +219,7 @@ const App = () => {
                 isLog={isLog}
                 setIsLog={setIsLog}
                 currentUser={currentUser}
-                handleSetCurrentUser={handleSetCurrentUser}
+                setCurrentUser={setCurrentUser}
               />
             }
           />
@@ -217,7 +232,7 @@ const App = () => {
                 isLog={isLog}
                 setIsLog={setIsLog}
                 currentUser={currentUser}
-                handleSetCurrentUser={handleSetCurrentUser}
+                setCurrentUser={setCurrentUser}
               />
             }
           />
