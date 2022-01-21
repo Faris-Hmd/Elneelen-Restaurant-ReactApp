@@ -4,13 +4,12 @@ import Forms from "./Forms";
 
 /** @format */
 const Settings = (props) => {
-  const currentUser = props.currentUser;
-  console.log(currentUser.name);
+  
   const Profile = (props) => {
     return (
       <div className="profileCon">
         <div className="profileImgCon">
-          <img src="./image/back 4.jpeg" alt="" />
+          <img src={`./image/${"back 4.jpeg"}`} alt={props.userName} />
         </div>
         <div className="username">{props.userName}</div>
       </div>
@@ -19,15 +18,15 @@ const Settings = (props) => {
 
   return (
     <div className="settingsCon ">
-      <div className={`${props.isLoggin(0) ? "hide" : ""} `}>
+      <div className={`${props.isLog ? "hide" : ""} `}>
         <Forms
           handleSetCurrentUser={props.handleSetCurrentUser}
           user={props.user}
-          isLoggin={props.isLoggin}
+          setIsLog={props.setIsLog}
         />
       </div>
-      <div className={`${props.isLoggin(1) ? "" : "hide"}`}>
-        <Profile userName={currentUser.name} />
+      <div className={`${props.isLog ? "" : "hide"}`}>
+        <Profile userName={props.currentUser.name} />
         <div className="settingsOpthionCon">
           <div className="settingsOpthion">My profile</div>
           <div className="settingsOpthion">My Ad</div>
@@ -35,6 +34,12 @@ const Settings = (props) => {
           <div className="settingsOpthion">About</div>
           <div className="settingsOpthion">Servies</div>
           <div className="settingsOpthion">Rate</div>
+          <div
+            className="settingsOpthion"
+            onClick={() => props.setIsLog(false)}
+          >
+            SignOut
+          </div>
         </div>
       </div>
     </div>

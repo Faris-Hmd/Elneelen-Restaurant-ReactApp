@@ -83,3 +83,7 @@
 .hideCartQu {
   transform: scale(0);
 }
+
+.hide{
+  display: none;
+}

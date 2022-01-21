@@ -11,7 +11,7 @@ const Forms = (props) => {
     props.user.map((user) => {
       if (user.name === userName.current.value) {
         if (user.password === password.current.value) {
-          props.isLoggin(true);
+          props.setIsLog(true);
           props.handleSetCurrentUser(userName.current.value);
         }
       }

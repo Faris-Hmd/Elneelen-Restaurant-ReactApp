@@ -10,12 +10,10 @@ import ProductList from "./component/ProductList";
 import Settings from "./component/Settings";
 import TopNav from "./component/TopNav";
 
-const App = () => {
-  const isLoggin = (islog = 0) => {
-    console.log(islog);
-    return islog;
-  };
 
+const App = () => {
+  const [isLog, setIsLog] = useState(false);
+  const [currentUser, setCurrentUser] = useState({});
   const [user, setUser] = useState([
     {
       name: "faris",
@@ -89,10 +87,10 @@ const App = () => {
     },
   ]);
 
-  const [currentUser, setCurrentUser] = useState({});
   const handleSetCurrentUser = (currentUser) => {
     const currentUserDetails = user.filter((user) => user.name === currentUser);
     setCurrentUser(currentUserDetails[0]);
+    setIsLog(true);
   };
 
   const categories = [
@@ -202,16 +200,26 @@ const App = () => {
             path={`/settings`}
             element={
               <Settings
-                isLoggin={isLoggin}
-                currentUser={currentUser}
                 user={user}
+                isLog={isLog}
+                setIsLog={setIsLog}
+                currentUser={currentUser}
                 handleSetCurrentUser={handleSetCurrentUser}
               />
             }
           />
           <Route
             path="/cart"
-            element={<CartList products={products} user={currentUser} />}
+            element={
+              <CartList
+                products={products}
+                user={user}
+                isLog={isLog}
+                setIsLog={setIsLog}
+                currentUser={currentUser}
+                handleSetCurrentUser={handleSetCurrentUser}
+              />
+            }
           />
         </Routes>
       </div>
