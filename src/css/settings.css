@@ -1,38 +1,36 @@
 /** @format */
-.profileImg {
+.settingsCon{
+  height: 100vh;
+}
+.profileCon {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 50px;
+}
+.profileImgCon {
   display: flex;
   justify-content: center;
   width: 100%;
 }
-.profilePage {
-  min-height: 100vh;
-  width: 100%;
-}
-.profileImg img {
+.profileImgCon img {
   width: 20vh;
   height: 20vh;
   margin: auto;
   border-radius: 50%;
   box-shadow: -5px 5px 10px var(--shadow-clr);
 }
-.profileDetail {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: 10px;
-  padding-top: 50px;
-}
 
-.profileDetail .username {
+.profileCon .username {
   padding: 10px;
   font-size: 1.3rem;
 }
-.profileOthion {
+.settingsOpthion {
   background: var(--primary-clr);
   box-shadow: 2px 2px 5px var(--shadow-clr);
-  padding: 12px;
+  padding: 10px;
   margin: 2px 0;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }

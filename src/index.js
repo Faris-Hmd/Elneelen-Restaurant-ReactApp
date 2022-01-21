@@ -11,7 +11,7 @@ import "./css/nav-bar.css";
 import "./css/cartList.css";
 import "./css/buttomNav.css";
 import "./css/horizontalSlide.css";
-import "./css/profile.css";
+import "./css/settings.css";
 import App from "./App";
 
 ReactDOM.render(

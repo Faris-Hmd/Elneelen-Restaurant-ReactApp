@@ -7,7 +7,7 @@ import CartList from "./component/Cartlist";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ButtomNav from "./component/ButtomNav";
 import ProductList from "./component/ProductList";
-import Profile from "./component/Profile";
+import Settings from "./component/Settings";
 import TopNav from "./component/TopNav";
 
 const App = () => {
@@ -200,7 +200,7 @@ const App = () => {
           <Route
             path="/profile"
             element={
-              <Profile
+              <Settings
                 user={user}
                 isLoggin={isLoggin}
                 currentUser={currentUser}
