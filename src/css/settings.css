@@ -37,7 +37,7 @@
 
 .signInMassegeCon {
   background: var(--primary-clr);
-  width: 80%;
+  width: 95%;
   height: 60vh;
   margin: 10vh auto;
   text-align: center;
@@ -61,7 +61,7 @@
 .signInMassegeCon .signInButton {
   background: var(--dark-clr);
   padding: 15px;
-  width: 80%;
+  width: 75%;
   margin: auto;
   box-shadow: -2px 2px 20px var(--shadow-clr);
   border-radius: 7px;

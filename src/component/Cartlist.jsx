@@ -2,8 +2,7 @@
 import { Link } from "react-router-dom";
 
 const CartList = (props) => {
-  const cart = props.products.filter((item) => item.qu !== 0);
-
+  const cart = props.cart;
   const CartItem = (props) => {
     return (
       <div className={`cartItemContainer  `}>

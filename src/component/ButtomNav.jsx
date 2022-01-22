@@ -14,10 +14,7 @@ const ButtomNav = (props) => {
         <Link to="/cart" className="Link buttomNavLink">
           <i className=" fa fa-shopping-cart fa-2x"></i>
           <div className="disc">Shoping cart</div>
-          <span
-            className={`cartQu ${props.quantity() === 0 ? "hideCartQu" : ""}`}
-          >
-          </span>
+          <span></span>
         </Link>
         <Link to="menu" className="Link buttomNavLink">
           <i className=" fa fa-home fa-2x"></i>
@@ -29,7 +26,7 @@ const ButtomNav = (props) => {
         </Link>
         <Link to="settings" className="Link buttomNavLink">
           <i className=" fa fa-gear fa-2x"></i>
-        <div className="disc">Settings</div>
+          <div className="disc">Settings</div>
         </Link>
       </div>
     </div>

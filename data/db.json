@@ -1,0 +1,117 @@
+{
+  "users": [
+    { "userName": "faris", "passWors": "faris" },
+    { "userName": "hmd", "passWors": "hmd" }
+  ],
+
+  "products": [
+    {
+      "id": 0,
+      "name": "baked tilapia",
+      "cost": 2000,
+      "rating": "4.9 /5",
+      "imgUrl": "baked tilapia.jpg",
+      "category": "pizza",
+      "qu": 111
+    },
+    {
+      "id": 1,
+      "name": "bbq burger",
+      "cost": "1100",
+      "rating": "3.5 / 5",
+      "imgUrl": "bbq burger.jpeg",
+      "category": "pizza",
+      "qu": 22
+    },
+    {
+      "id": 2,
+      "name": "Braised Oxtail Burger",
+      "cost": "1450",
+      "rating": "4.9 /5",
+      "imgUrl": "Braised Oxtail Burger .jpeg",
+      "qu": 0
+    },
+    {
+      "id": 3,
+      "name": "baked tilapia",
+      "cost": 2000,
+      "rating": "4.9 /5",
+      "imgUrl": "baked tilapia.jpg",
+      "category": "pizza",
+      "qu": 1
+    },
+    {
+      "id": 4,
+      "name": "bbq burger",
+      "cost": "1100",
+      "rating": "3.5 / 5",
+      "imgUrl": "bbq burger.jpeg",
+      "category": "pizza",
+      "qu": 2
+    },
+    {
+      "id": 5,
+      "name": "Braised Oxtail Burger",
+      "cost": "1450",
+      "rating": "4.9 /5",
+      "imgUrl": "Braised Oxtail Burger .jpeg",
+      "qu": 3
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "burger",
+      "imgUrl": "burgerCate.png",
+      "path": "burger"
+    },
+    {
+      "id": 2,
+      "name": "Cold drink",
+      "imgUrl": "Black Bean Burgers .jpeg",
+      "path": "pizza"
+    },
+    {
+      "id": 3,
+      "name": "Pizza",
+      "imgUrl": "pizzaCate.png",
+      "path": ""
+    },
+    {
+      "id": 4,
+      "name": "burger",
+      "imgUrl": "burgerCate.png",
+      "path": "burger"
+    },
+    {
+      "id": 5,
+      "name": "Cold drink",
+      "imgUrl": "Black Bean Burgers .jpeg",
+      "path": "pizza"
+    },
+    {
+      "id": 6,
+      "name": "Pizza",
+      "imgUrl": "pizzaCate.png",
+      "path": ""
+    },
+    {
+      "id": 7,
+      "name": "burger",
+      "imgUrl": "burgerCate.png",
+      "path": "burger"
+    },
+    {
+      "id": 8,
+      "name": "Cold drink",
+      "imgUrl": "Black Bean Burgers .jpeg",
+      "path": "pizza"
+    },
+    {
+      "id": 9,
+      "name": "Pizza",
+      "imgUrl": "pizzaCate.png",
+      "path": ""
+    }
+  ]
+}
