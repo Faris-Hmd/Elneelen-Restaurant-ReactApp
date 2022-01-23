@@ -9,17 +9,19 @@ import ButtomNav from "./component/ButtomNav";
 import ProductList from "./component/ProductList";
 import Settings from "./component/Settings";
 import TopNav from "./component/TopNav";
-import Forms from "./component/Forms";
+import SignIn from "./component/SignIn";
+import SignUp from "./component/SignUp";
 import { useEffect } from "react/cjs/react.development";
 
 const App = () => {
   const [products, setProducts] = useState();
   const [isLog, setIsLog] = useState(false);
-  const [currentUser, setCurrentUser] = useState({});
-  const [user, setUser] = useState([]);
+  const [currentUser, setCurrentUser] = useState({ cart: [] });
+  const [users, setUsers] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [qu, setQu] = useState(false);
 
-  useEffect(() => {
+  /*useEffect(() => {
     fetch("http://localhost:8000/products")
       .then((res) => {
         return res.json();
@@ -32,7 +34,7 @@ const App = () => {
         return res.json();
       })
       .then((data) => {
-        setUser(data);
+        setUsers(data);
       });
     fetch("http://localhost:8000/categories")
       .then((res) => {
@@ -41,10 +43,11 @@ const App = () => {
       .then((data) => {
         setCategories(data);
       });
-  }, []);
+  }, []);*/
 
   const handleIncr = (id) => {
-    setUser();
+    setUsers();
+    setCategories()
 
     setCurrentUser(
       currentUser.cart.map((item) =>
@@ -62,29 +65,41 @@ const App = () => {
     );
   };
 
-  /* const quantity = () => {
-    let qu = 0;
-    currentUser.cart.map((item) => {
-      if (item.qu > 0) {
-        qu = qu + 1;
+  useEffect(
+    (qu) => {
+      if (currentUser.cart.length > 0) {
+        setQu(true);
+      } else {
+        setQu(false);
       }
-      return null;
-    });
-    return qu;
-  };*/
+    },
+    [currentUser]
+  );
 
   return (
     <BrowserRouter>
       <div className="container">
-        <ButtomNav /*quantity={quantity} */ />
+        <ButtomNav isLog={isLog} qu={qu} />
         <TopNav />
         <Routes>
           <Route path="/" element={<Home categories={categories} />} />
           <Route
             path="/signin"
             element={
-              <Forms
-                user={user}
+              <SignIn
+                users={users}
+                isLog={isLog}
+                setIsLog={setIsLog}
+                currentUser={currentUser}
+                setCurrentUser={setCurrentUser}
+              />
+            }
+          />
+          <Route
+            path="/signUp"
+            element={
+              <SignUp
+                users={users}
                 isLog={isLog}
                 setIsLog={setIsLog}
                 currentUser={currentUser}
@@ -106,7 +121,7 @@ const App = () => {
             path={`/settings`}
             element={
               <Settings
-                user={user}
+                users={users}
                 isLog={isLog}
                 setIsLog={setIsLog}
                 currentUser={currentUser}
@@ -117,7 +132,9 @@ const App = () => {
           <Route
             path="/cart"
             element={
-              <CartList cart={currentUser.cart} user={user} isLog={isLog} />
+              currentUser && (
+                <CartList cart={currentUser.cart} users={users} isLog={isLog} />
+              )
             }
           />
         </Routes>

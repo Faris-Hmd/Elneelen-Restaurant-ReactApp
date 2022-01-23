@@ -1,7 +1,40 @@
 {
   "users": [
-    { "userName": "faris", "passWors": "faris" },
-    { "userName": "hmd", "passWors": "hmd" }
+    {
+      "userName": "faris",
+      "passWord": "faris",
+      "cart": []
+    },
+    {
+      "userName": "farisHmd",
+      "passWord": "farisHmd",
+      "cart": [
+        {
+          "id": 0,
+          "name": "baked tilapia",
+          "cost": 2000,
+          "rating": "4.9 /5",
+          "imgUrl": "baked tilapia.jpg",
+          "category": "burger",
+          "qu": 111
+        }
+      ]
+    },
+    {
+      "userName": "hmd",
+      "passWord": "hmd",
+      "cart": [
+        {
+          "id": 1,
+          "name": "bbq burger",
+          "cost": "1100",
+          "rating": "3.5 / 5",
+          "imgUrl": "bbq burger.jpeg",
+          "category": "pizza",
+          "qu": 22
+        }
+      ]
+    }
   ],
 
   "products": [
@@ -11,7 +44,7 @@
       "cost": 2000,
       "rating": "4.9 /5",
       "imgUrl": "baked tilapia.jpg",
-      "category": "pizza",
+      "category": "burger",
       "qu": 111
     },
     {

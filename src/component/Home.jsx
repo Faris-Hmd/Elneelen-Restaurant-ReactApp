@@ -2,7 +2,7 @@
 
 import React from "react";
 import Categories from "./Categories";
-import { Link } from "react-router-dom";
+
 ///////////////// SLIDER COMPONENT ////////////////
 const HorizontalSlider = () => {
   return (
@@ -39,17 +39,19 @@ const Home = (props) => {
           <h2>Welcome In</h2>
           <h1>ElNeelen Restaurant</h1>
           <h4>
-            Burger, pizza, Sandwich, Ice cream, Hot Drinks, Cold Drinks, Public
+            Burgers, pizza, Sandwich, Ice cream, Hot Drinks, Cold Drinks, Public
             Meals, Fish, Meats...etc
           </h4>
-          <Link className="Link" to="/menu">
+          <a href="#category">
             <div className="btn-order">Order Now</div>
-          </Link>
+          </a>
         </div>
       </div>
       <div className="label">Offers </div>
       <HorizontalSlider />
-      <div className="label">Categories </div>
+      <div id="category" className="label">
+        Categories{" "}
+      </div>{" "}
       <Categories categories={props.categories} />
       <div className="label">Top Paied </div>
       <HorizontalSlider />

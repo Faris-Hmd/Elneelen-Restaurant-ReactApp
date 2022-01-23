@@ -1,7 +1,10 @@
 /** @format */
-import { Link } from "react-router-dom";
+
+import { useNavigate } from "react-router-dom";
+
 /** @format */
 const Settings = (props) => {
+  const history = useNavigate();
   const Profile = (props) => {
     return (
       <div className="profileCon">
@@ -15,18 +18,8 @@ const Settings = (props) => {
 
   return (
     <div className="settingsCon ">
-      <div className={`${props.isLog ? "hide" : ""} `}>
-        <div className="signInMassegeCon">
-          <div className="signInMassege">
-            You must sign in first to accese this page
-          </div>
-          <Link className="signInButton" to="/signin">
-            Sign In
-          </Link>
-        </div>
-      </div>
       <div className={`${props.isLog ? "" : "hide"}`}>
-        <Profile userName={props.currentUser.name} />
+        <Profile userName={props.currentUser.userName} />
         <div className="settingsOpthionCon">
           <div className="settingsOpthion">My profile</div>
           <div className="settingsOpthion">My Ad</div>
@@ -36,7 +29,11 @@ const Settings = (props) => {
           <div className="settingsOpthion">Rate</div>
           <div
             className="settingsOpthion"
-            onClick={() => props.setIsLog(false)}
+            onClick={() => {
+              props.setIsLog(false);
+              props.setCurrentUser({ cart: [] });
+              history("/");
+            }}
           >
             SignOut
           </div>

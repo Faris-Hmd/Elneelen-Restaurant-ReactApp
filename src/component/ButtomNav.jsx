@@ -11,10 +11,15 @@ const ButtomNav = (props) => {
           <i className=" fa fa-home fa-2x"></i>
           <div className="disc">Home</div>
         </Link>
-        <Link to="/cart" className="Link buttomNavLink">
+        <Link
+          to={`/${props.isLog ? "cart" : "signin"}`}
+          className="Link buttomNavLink"
+        >
           <i className=" fa fa-shopping-cart fa-2x"></i>
           <div className="disc">Shoping cart</div>
-          <span></span>
+          <span
+            className={` ${props.qu === true ? "cartQu" : "hideCartQu"}`}
+          ></span>
         </Link>
         <Link to="menu" className="Link buttomNavLink">
           <i className=" fa fa-home fa-2x"></i>
@@ -24,7 +29,10 @@ const ButtomNav = (props) => {
           <i className=" fa fa-home fa-2x"></i>
           <div className="disc">Deliverly</div>
         </Link>
-        <Link to="settings" className="Link buttomNavLink">
+        <Link
+          to={`/${props.isLog ? "settings" : "signin"}`}
+          className="Link buttomNavLink"
+        >
           <i className=" fa fa-gear fa-2x"></i>
           <div className="disc">Settings</div>
         </Link>
