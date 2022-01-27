@@ -37,6 +37,7 @@ const App = () => {
   }, []);*/
   //////////////////// HANDLE INCREMENT //////////////
   const handleIncr = (productId, product) => {
+    setCategories();
     axios.get(`${baseURL}/usersdata/${currentUser.id}`).then((res) => {
       setCurrentUser(res.data);
     });
