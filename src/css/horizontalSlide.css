@@ -38,6 +38,7 @@
 .category {
   background: var(--primary-clr);
   width: min(28%, 16em);
+  max-height: 8em;
   margin: 1em auto;
   border-radius: 8px;
   box-shadow: -2px 2px 18px var(--shadow-clr);
