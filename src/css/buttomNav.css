@@ -27,11 +27,11 @@
   transition: all 300ms;
 }
 .buttomNav .disc {
-  font-size: 0.85rem;
+  font-size: 0.7rem;
 }
 
 .buttomNav img {
-  width: 2.2em;
+  width: 1.8em;
   padding: 0.4em;
   filter: opacity(0.5);
 }
