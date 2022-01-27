@@ -2,16 +2,15 @@
 .homeContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evanly;
   width: 100%;
-  padding-bottom: 80px;
-  scroll-behavior: smooth;
+  padding-bottom: 10em;
 }
 
 a {
   text-decoration: none;
 }
 .nav-bar {
+  margin-top: 2em;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -20,31 +19,29 @@ a {
 .nav-con {
   padding: 15px;
   color: white;
-  font-size: 15px;
-
-  text-shadow: 1px 1px 20px white;
+  font-size: 1rem;
 }
 .welcome {
   width: 100%;
+  height: 100vh;
   background-image: linear-gradient(
-    rgba(204, 102, 0, 80%),
-    rgba(160, 81, 2, 0.4)
+    rgba(204, 102, 0, 0.761),
+    rgba(160, 81, 2, 0.556)
   );
   background-image: url("/public/image/back 4.jpeg");
-  -webkit-backdrop-filter: blur(7px);
-  backdrop-filter: blur(7px);
+  backdrop-filter: blur(100px);
+  background-size: cover;
   box-shadow: 5px 5px 5px var(--shadow-clr);
 }
 
 .txt {
   text-align: center;
   font-weight: bold;
-  font-size: 3vh;
+  font-size: 4vh;
   color: white;
-  margin: rgb(34, 28, 28);
+  margin: auto;
   padding: 0.8em;
   width: 100%;
-  height: 100%;
 }
 
 .txt h1 {
@@ -54,28 +51,25 @@ a {
 }
 
 .btn-order {
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 1em;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: all 300ms;
+  display: block;
+  text-shadow: 2px 2px 2px black;
   text-align: center;
   margin: auto;
   margin-top: 40px;
   display: block;
-  width: 40%;
+  width: min(45%, 9em);
   text-align: center;
   background-image: linear-gradient(
     rgba(204, 102, 0, 100%),
     rgba(204, 102, 0, 80%)
   );
-}
-
-.btn-order {
-  color: white;
-  text-decoration: none;
-  border-radius: 10px;
-  padding: 15px;
-  font-size: 20px;
-  font-weight: bold;
-  transition: transform 500ms;
-  display: block;
-  text-shadow: 2px 2px 2px black;
 }
 
 .btn-order:hover {

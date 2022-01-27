@@ -1,14 +1,46 @@
 /** @format */
 
 import React from "react";
-import Categories from "./Categories";
+
+import { Link } from "react-router-dom";
+///////////////// CATEGORIES COMPONENT ////////////////
+const Categories = (props) => {
+  const categories = props.categories;
+  const Category = (props) => {
+    return (
+      <div className="category">
+        <Link to={`/menu/${props.path}`} className="Link">
+          <div className="imgContainer">
+            <img src={`./image/${props.imgUrl}`} alt="Category" />
+          </div>
+          <div className="catygoryName">{props.name}</div>
+        </Link>
+      </div>
+    );
+  };
+
+  return (
+    <div className="categories">
+      {categories.map((cat) => {
+        return (
+          <Category
+            key={cat.id}
+            name={cat.name}
+            imgUrl={cat.imgUrl}
+            path={cat.path}
+          />
+        );
+      })}
+    </div>
+  );
+};
 
 ///////////////// SLIDER COMPONENT ////////////////
 const HorizontalSlider = () => {
   return (
     <div className="horizontalCardContainer">
       <div className="card">
-        <img src="./image/3559503.jpg" alt="" />
+        <img src="./image/chicken-leg-svgrepo-com.svg" alt="" />
       </div>
       <div className="card">
         <img src="./image/3559503.jpg" alt="" />
@@ -50,10 +82,10 @@ const Home = (props) => {
       <div className="label">Offers </div>
       <HorizontalSlider />
       <div id="category" className="label">
-        Categories{" "}
-      </div>{" "}
+        Categories
+      </div>
       <Categories categories={props.categories} />
-      <div className="label">Top Paied </div>
+      <div className="label">Top Paid </div>
       <HorizontalSlider />
     </div>
   );

@@ -1,13 +1,9 @@
 {
-  "users": [
+  "usersdata": [
     {
       "userName": "faris",
       "passWord": "faris",
-      "cart": []
-    },
-    {
-      "userName": "farisHmd",
-      "passWord": "farisHmd",
+      "id": 1,
       "cart": [
         {
           "id": 0,
@@ -16,27 +12,63 @@
           "rating": "4.9 /5",
           "imgUrl": "baked tilapia.jpg",
           "category": "burger",
-          "qu": 111
+          "qu": 12
+        },
+        {
+          "id": 1,
+          "name": "bbq burger",
+          "cost": 2000,
+          "rating": "3.5 / 5",
+          "imgUrl": "bbq burger.jpeg",
+          "category": "burger",
+          "qu": 3
+        },
+        {
+          "id": 2,
+          "name": "Braised Oxtail Burger",
+          "cost": 1000,
+          "rating": "4.9 /5",
+          "imgUrl": "Braised Oxtail Burger .jpeg",
+          "category": "burger",
+          "qu": 17
+        },
+        {
+          "id": 3,
+          "name": "baked tilapias",
+          "cost": 2000,
+          "rating": "4.9 /5",
+          "imgUrl": "baked tilapia.jpg",
+          "category": "burger",
+          "qu": 7
+        },
+        {
+          "id": 4,
+          "name": "bbq burger",
+          "cost": 900,
+          "rating": "3.5 / 5",
+          "imgUrl": "bbq burger.jpeg",
+          "category": "pizza",
+          "qu": 4
         }
       ]
     },
     {
       "userName": "hmd",
       "passWord": "hmd",
+      "id": 2,
       "cart": [
         {
-          "id": 1,
-          "name": "bbq burger",
-          "cost": "1100",
-          "rating": "3.5 / 5",
-          "imgUrl": "bbq burger.jpeg",
-          "category": "pizza",
-          "qu": 22
+          "id": 0,
+          "name": "baked tilapia",
+          "cost": 2000,
+          "rating": "4.9 /5",
+          "imgUrl": "baked tilapia.jpg",
+          "category": "burger",
+          "qu": 1
         }
       ]
     }
   ],
-
   "products": [
     {
       "id": 0,
@@ -44,106 +76,101 @@
       "cost": 2000,
       "rating": "4.9 /5",
       "imgUrl": "baked tilapia.jpg",
-      "category": "burger",
-      "qu": 111
+      "category": "burger"
     },
     {
       "id": 1,
       "name": "bbq burger",
-      "cost": "1100",
+      "cost": 2000,
       "rating": "3.5 / 5",
       "imgUrl": "bbq burger.jpeg",
-      "category": "pizza",
-      "qu": 22
+      "category": "burger"
     },
     {
       "id": 2,
       "name": "Braised Oxtail Burger",
-      "cost": "1450",
+      "cost": 1000,
       "rating": "4.9 /5",
       "imgUrl": "Braised Oxtail Burger .jpeg",
-      "qu": 0
+      "category": "burger"
     },
     {
       "id": 3,
-      "name": "baked tilapia",
+      "name": "baked tilapias",
       "cost": 2000,
       "rating": "4.9 /5",
       "imgUrl": "baked tilapia.jpg",
-      "category": "pizza",
-      "qu": 1
+      "category": "burger"
     },
     {
       "id": 4,
       "name": "bbq burger",
-      "cost": "1100",
+      "cost": 900,
       "rating": "3.5 / 5",
       "imgUrl": "bbq burger.jpeg",
-      "category": "pizza",
-      "qu": 2
+      "category": "pizza"
     },
     {
       "id": 5,
       "name": "Braised Oxtail Burger",
-      "cost": "1450",
+      "cost": 1450,
       "rating": "4.9 /5",
-      "imgUrl": "Braised Oxtail Burger .jpeg",
-      "qu": 3
+      "imgUrl": "Braised Oxtail Burger .jpeg"
     }
   ],
   "categories": [
     {
       "id": 1,
       "name": "burger",
-      "imgUrl": "burgerCate.png",
+      "imgUrl": "burger-svgrepo-com.svg",
       "path": "burger"
     },
     {
       "id": 2,
-      "name": "Cold drink",
-      "imgUrl": "Black Bean Burgers .jpeg",
+      "name": "Pizza",
+      "imgUrl": "pizza-svgrepo-com.svg",
       "path": "pizza"
     },
     {
       "id": 3,
-      "name": "Pizza",
-      "imgUrl": "pizzaCate.png",
+      "name": "Sandwich",
+      "imgUrl": "hot-dog-svgrepo-com.svg",
       "path": ""
     },
     {
       "id": 4,
-      "name": "burger",
-      "imgUrl": "burgerCate.png",
-      "path": "burger"
+      "name": "Hot Drinks",
+      "imgUrl": "coffee-cup-svgrepo-com.svg",
+      "path": ""
     },
     {
       "id": 5,
-      "name": "Cold drink",
-      "imgUrl": "Black Bean Burgers .jpeg",
+      "name": "Cold drinks",
+      "imgUrl": "smoothie-svgrepo-com.svg",
       "path": "pizza"
     },
     {
       "id": 6,
-      "name": "Pizza",
-      "imgUrl": "pizzaCate.png",
+      "name": "Icecreams",
+      "imgUrl": "ice-cream-svgrepo-com.svg",
       "path": ""
     },
     {
       "id": 7,
-      "name": "burger",
-      "imgUrl": "burgerCate.png",
-      "path": "burger"
+      "name": "Sweats",
+      "imgUrl": "doughnut-svgrepo-com.svg",
+      "path": "pizza"
     },
     {
       "id": 8,
-      "name": "Cold drink",
-      "imgUrl": "Black Bean Burgers .jpeg",
+      "name": "Salad",
+      "imgUrl": "salad-svgrepo-com.svg",
       "path": "pizza"
     },
     {
       "id": 9,
-      "name": "Pizza",
-      "imgUrl": "pizzaCate.png",
+      "name": "Meats",
+      "imgUrl": "chicken-leg-svgrepo-com.svg",
       "path": ""
     }
   ]

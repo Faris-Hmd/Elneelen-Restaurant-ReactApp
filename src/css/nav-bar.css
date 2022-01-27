@@ -1,27 +1,4 @@
 /** @format */
-
-* {
-  margin: 0;
-  padding: 0;
-  font-weight: bold;
-  box-sizing: border-box;
-}
-
-.topNav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  background-color: var( --buttomNav-clr);
-  backdrop-filter: blur(10px);
-  z-index: 2;
-}
-
-.topNav .backButton{
-	padding: 0 15px;
-}
-
 header {
   position: fixed;
   width: 100%;
@@ -30,7 +7,38 @@ header {
   z-index: 1;
 }
 
-.backHeader {
+.topNav {
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  background-color: var(--buttomNav-clr);
+  backdrop-filter: blur(10px);
+  z-index: 2;
+}
+
+.topNav .backButton img{
+  width: 2.5em;
+  margin-left: .6em;
+  cursor: pointer;
+}
+
+
+
+.logo {
+  margin: auto 5px auto auto;
+  font-size: 25px;
+  font-weight: 550;
+}
+
+.logo span {
+  color: var(--dark-clr);
+}
+
+/*.backHeader {
   content: "";
   position: absolute;
   top: 0;
@@ -230,4 +238,4 @@ header li:hover {
   text-align: center;
   padding: 5px;
   width: 50%;
-}
+}*/

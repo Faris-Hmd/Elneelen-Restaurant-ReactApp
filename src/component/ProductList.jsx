@@ -4,9 +4,10 @@ import React from "react";
 import { useParams } from "react-router-dom";
 const ProductList = (props) => {
   const { category } = useParams();
-  let products = props.products.filter(
+  const products = props.products.filter(
     (product) => product.category === category
   );
+  const isLog = props.isLog;
 
   const Product = (props) => {
     const handleQuShiftClass = () => {
@@ -27,15 +28,17 @@ const ProductList = (props) => {
         <div className="cost">
           <i className="fa fa-tag fa-fw"></i> {props.cost}
         </div>
-        <div className="counter-d">
-          <div className="decrease" onClick={props.handleDecr}>
-            <i className="fa fa-angle-left"></i>
-          </div>
+        {isLog && (
+          <div className="counter-d">
+            <div className="decrease" onClick={props.handleDecr}>
+              <i className="fa fa-angle-left"></i>
+            </div>
 
-          <div className="increase" onClick={props.handleIncr}>
-            <i className="fa fa-angle-right"></i>
+            <div className="increase" onClick={props.handleIncr}>
+              <i className="fa fa-angle-right"></i>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     );
   };
@@ -43,6 +46,10 @@ const ProductList = (props) => {
   return (
     <div className="productContainer">
       {products.map((item) => {
+        const product = props.currentUser.cart.find(
+          (product) => product.id === item.id
+        );
+
         return (
           <Product
             key={item.id}
@@ -51,9 +58,9 @@ const ProductList = (props) => {
             cost={item.cost}
             rating={item.rating}
             imgUrl={item.imgUrl}
-            qu={item.qu}
+            qu={product ? product.qu : 0}
             handleDecr={() => props.handleDecr(item.id)}
-            handleIncr={() => props.handleIncr(item.id)}
+            handleIncr={() => props.handleIncr(item.id, item)}
           />
         );
       })}

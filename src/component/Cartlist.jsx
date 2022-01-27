@@ -1,7 +1,18 @@
 /** @format */
+import axios from "axios";
 import { Link } from "react-router-dom";
+import { useEffect } from "react/cjs/react.development";
 
 const CartList = (props) => {
+  const currenUser = props.currentUser;
+  const setCurrentUser = props.setCurrentUser;
+  useEffect(() => {
+    axios
+      .get(`http://localhost:8000/usersdata/${currenUser.id}`)
+      .then((res) => {
+        setCurrentUser(res.data);
+      });
+  }, []);
   const cart = props.cart;
   const CartItem = (props) => {
     return (
