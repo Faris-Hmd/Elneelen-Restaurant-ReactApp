@@ -9,7 +9,7 @@ const ButtomNav = (props) => {
     <div>
       <div className="buttomNav">
         <Link
-          to="/"
+          to="/homepage"
           className="Link buttomNavLink"
           onClick={() => {
             setCurrenPage("home");
