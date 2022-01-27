@@ -11,7 +11,7 @@ import Settings from "./component/Settings";
 import TopNav from "./component/TopNav";
 import SignIn from "./component/SignIn";
 import SignUp from "./component/SignUp";
-import { useEffect } from "react/cjs/react.development";
+/*import { useEffect } from "react/cjs/react.development";*/ 
 
 import axios from "axios";
 
@@ -38,6 +38,7 @@ const App = () => {
   //////////////////// HANDLE INCREMENT //////////////
   const handleIncr = (productId, product) => {
     setCategories();
+    setQu();
     axios.get(`${baseURL}/usersdata/${currentUser.id}`).then((res) => {
       setCurrentUser(res.data);
     });
@@ -82,7 +83,7 @@ const App = () => {
     );
   };
 
-  useEffect(
+  /*useEffect(
     (qu) => {
       if (currentUser.cart.length > 0) {
         setQu(true);
@@ -91,7 +92,7 @@ const App = () => {
       }
     },
     [currentUser]
-  );
+  );*/
 
   return (
     
