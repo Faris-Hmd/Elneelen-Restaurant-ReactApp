@@ -10,7 +10,6 @@
 }
 .product {
   width: min(47%, 16em);
-  padding-bottom: 1.5em;
   background: var(--primary-clr);
   color: rgb(43, 39, 39);
   margin: 1.2em auto;
@@ -79,10 +78,10 @@
 
 .increase,
 .decrease {
-  padding: 0px 0.9em;
+  padding: .1em 1em;
   margin: 0.5em 0.2em;
   text-align: center;
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: 600;
   background-color: var(--dark-clr);
   color: #eee;

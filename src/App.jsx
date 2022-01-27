@@ -24,7 +24,7 @@ const App = () => {
   const [categories, setCategories] = useState([]);
   const [qu, setQu] = useState(false);
 
-  useEffect(() => {
+  /*useEffect(() => {
     axios.get(`${baseURL}/products`).then((res) => {
       setProducts(res.data);
     });
@@ -34,7 +34,7 @@ const App = () => {
     axios.get(`${baseURL}/categories`).then((res) => {
       setCategories(res.data);
     });
-  }, []);
+  }, []);*/
   //////////////////// HANDLE INCREMENT //////////////
   const handleIncr = (productId, product) => {
     axios.get(`${baseURL}/usersdata/${currentUser.id}`).then((res) => {
