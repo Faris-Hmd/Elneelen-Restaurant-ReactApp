@@ -101,7 +101,7 @@ const App = () => {
           <ButtomNav isLog={isLog} qu={qu} />
           <TopNav />
           <Routes>
-            <Route path="/homepage" element={<Home categories={categories} />} />
+            <Route path="/" element={<Home categories={categories} />} />
             <Route
               path="/signin"
               element={
