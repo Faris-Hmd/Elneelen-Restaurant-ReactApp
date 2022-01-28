@@ -12,13 +12,13 @@
   overflow: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  padding-right: 2em;
+  scroll-padding-right: 2em;
 }
 
 .horizontalCardContainer .card {
-  width: 25em;
-  height: 15em;
-  margin: auto 1.5em;
+  width: 20em;
+  height: 13em;
+  margin: auto 2em;
   border-radius: 10px;
   box-shadow: -4px 4px 20px var(--shadow-clr);
   scroll-snap-align: center;
@@ -38,7 +38,7 @@
 .category {
   background: var(--primary-clr);
   width: min(28%, 16em);
-  max-height: 8em;
+  
   margin: 1em auto;
   border-radius: 8px;
   box-shadow: -2px 2px 18px var(--shadow-clr);
@@ -52,7 +52,7 @@
 }
 .category img {
   width: 70%;
-
+ max-height: 8em;
   padding: 1em;
   padding-bottom: 0;
   filter: drop-shadow(-5px 5px 8px var(--shadow-clr));
