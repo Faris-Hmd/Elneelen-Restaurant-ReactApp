@@ -12,7 +12,6 @@
   overflow: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  scroll-padding-right: 2em;
 }
 
 .horizontalCardContainer .card {
