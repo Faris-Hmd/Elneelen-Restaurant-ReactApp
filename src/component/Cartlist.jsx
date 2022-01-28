@@ -31,16 +31,6 @@ const CartList = (props) => {
 
   return (
     <>
-      <div className={`${props.isLog ? "hide" : ""} `}>
-        <div className="signInMassegeCon">
-          <div className="signInMassege">
-            You must sign in first to accese this page
-          </div>
-          <Link className="signInButton" to="/signin">
-            Sign In
-          </Link>
-        </div>
-      </div>
       <div className={`cart ${props.isLog ? "" : "hide"} `}>
         {cart.map((item) => {
           return (

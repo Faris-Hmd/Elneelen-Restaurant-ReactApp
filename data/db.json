@@ -49,6 +49,51 @@
           "imgUrl": "bbq burger.jpeg",
           "category": "pizza",
           "qu": 4
+        },
+        {
+          "id": 0,
+          "name": "baked tilapia",
+          "cost": 2000,
+          "rating": "4.9 /5",
+          "imgUrl": "baked tilapia.jpg",
+          "category": "burger",
+          "qu": 14
+        },
+        {
+          "id": 1,
+          "name": "bbq burger",
+          "cost": 2000,
+          "rating": "3.5 / 5",
+          "imgUrl": "bbq burger.jpeg",
+          "category": "burger",
+          "qu": 3
+        },
+        {
+          "id": 2,
+          "name": "Braised Oxtail Burger",
+          "cost": 1000,
+          "rating": "4.9 /5",
+          "imgUrl": "Braised Oxtail Burger .jpeg",
+          "category": "burger",
+          "qu": 17
+        },
+        {
+          "id": 3,
+          "name": "baked tilapias",
+          "cost": 2000,
+          "rating": "4.9 /5",
+          "imgUrl": "baked tilapia.jpg",
+          "category": "burger",
+          "qu": 7
+        },
+        {
+          "id": 4,
+          "name": "bbq burger",
+          "cost": 900,
+          "rating": "3.5 / 5",
+          "imgUrl": "bbq burger.jpeg",
+          "category": "pizza",
+          "qu": 4
         }
       ]
     },
