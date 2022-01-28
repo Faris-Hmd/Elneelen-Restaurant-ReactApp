@@ -51,9 +51,9 @@
   width: 100%;
 }
 .category img {
-  width: 70%;
- max-height: 8em;
-  padding: 1em;
+  width: 80%;
+ max-height: 5em;
+  padding: .8em;
   padding-bottom: 0;
   filter: drop-shadow(-5px 5px 8px var(--shadow-clr));
 }
