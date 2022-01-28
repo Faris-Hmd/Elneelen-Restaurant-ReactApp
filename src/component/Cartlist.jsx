@@ -1,7 +1,7 @@
 /** @format */
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { useEffect } from "react/cjs/react.development";
+import { useEffect } from "react";
 
 const CartList = (props) => {
   const currenUser = props.currentUser;
