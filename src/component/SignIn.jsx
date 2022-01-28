@@ -3,13 +3,13 @@
 import React from "react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useEffect } from "react/cjs/react.development";
+import { useEffect } from "react";
 import axios from "axios";
 const SignIn = (props) => {
   const history = useNavigate();
   const [userName, setUserName] = useState("");
   const [passWord, setPassWord] = useState("");
-  /*useEffect(() => {
+  useEffect(() => {
     axios
       .get("http://localhost:8000/usersdata")
       .then((res) => {
@@ -18,7 +18,7 @@ const SignIn = (props) => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);*/
+  }, []);
   const handleSignIn = (e) => {
     e.preventDefault();
     props.users.map((user) => {
