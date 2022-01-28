@@ -1,7 +1,7 @@
 /** @format */
 
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import Home from "./component/Home";
 import CartList from "./component/Cartlist";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -11,8 +11,6 @@ import Settings from "./component/Settings";
 import TopNav from "./component/TopNav";
 import SignIn from "./component/SignIn";
 import SignUp from "./component/SignUp";
-/*import { useEffect } from "react/cjs/react.development";*/
-
 import axios from "axios";
 
 const App = () => {
@@ -153,7 +151,7 @@ const App = () => {
   ]);
   const [qu, setQu] = useState(false);
 
-  /*useEffect(() => {
+  useEffect(() => {
     axios.get(`${baseURL}/products`).then((res) => {
       setProducts(res.data);
     });
@@ -163,7 +161,7 @@ const App = () => {
     axios.get(`${baseURL}/categories`).then((res) => {
       setCategories(res.data);
     });
-  }, []);*/
+  }, []);
   //////////////////// HANDLE INCREMENT //////////////
   const handleIncr = (productId, product) => {
     setCategories();
@@ -212,7 +210,7 @@ const App = () => {
     );
   };
 
-  /*useEffect(
+  useEffect(
     (qu) => {
       if (currentUser.cart.length > 0) {
         setQu(true);
@@ -221,7 +219,7 @@ const App = () => {
       }
     },
     [currentUser]
-  );*/
+  );
 
   return (
     <BrowserRouter>
